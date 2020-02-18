@@ -15,6 +15,10 @@ int string_formater(va_list ap, char mod[MODIFIERS_SIZE])
     char *var = va_arg(ap, char *);
     int length;
 
+    if (var == NULL) {
+        write(1, "(null)", 7);
+        return 7;
+    }
     if (contains('0', mod))
         length = my_getnbr(&mod[last_mod(mod)]);
     else

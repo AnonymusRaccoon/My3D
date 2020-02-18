@@ -1,0 +1,96 @@
+The map is an xml.
+
+You have prefabs or complete scenes.
+
+A scene must have the tag <gc_scene> and should contains a <data> tag with every
+static data to load with the scene (for the sfml, you have the <sprite>, <font>
+and <music> tags).
+
+A scene or a prefab may have a <gc_entities> tag listing every entity that needs
+to be created.
+
+To define an entity, use the tag <gc_entity> and put components 
+inside the entity.
+
+
+Valid components and there properties are:
+
+    transform_component: allow the entity to be placed on the map.
+        -> Position: x, y - set the position of the entity
+        -> Size:     x, y - set the size of an entity.
+
+    renderer: draw the entity on the screen
+        -> src: give the path of the sprite to use 
+            (should already be in the data of the scene)
+            -> rect (child): height, width, top, left - Use an offset of the 
+                texture and not the whole texture.
+            -> animation: add an animation to the animation manager 
+                of this entity
+                -> name: The name it is refered as
+                -> frame_count: the number of frame the animation has
+                -> frame_rate: the number of frame to show per second
+                -> rect (child): change the start offset/size of the texture
+        -> text: draw the inputed text on the screen instead of a texture
+
+    fixed_to_cam: make the entity follow the camera
+        -> offset: set the position of the entity on the screen 
+            (will be kept when the camera moves)
+
+    parallax_component: make the texture of this entity move with it's movements
+        -> speed: apply a speed multiplier to the parallax.
+
+    collision_component: provide collsisions
+        -> layer: select witch layer the entity collide with and wich layer may
+            see this entity.
+
+    friction_giver: apply frictions to the entities that can have frictions when
+        theses entities are on contact with this one.
+        -> value: the ammount of friction to give
+
+    friction_component: allow this entity to have friction
+        -> value: the ammount of friction that the air give to this entity
+
+    movable_component: allow the entity to move or be moved 
+        (is subject to acceleration and so on)
+
+    controllable_component: tells that this entity may have inputs 
+        (AI, Keyboard, Network...)
+
+    keyboard_controller: allow this entity to be controlled by the keyboard
+        -> left: left moving key id
+        -> right: right moving key id
+        -> jump: jump moving key id.
+        PS: ids should confort with your rendering engine. 
+            For the sfml, use sfml bindings.
+
+    gravity_component: make this entity be subject to the gravity
+        -> force: the force of the gravity
+
+    walk_action: allow this entity to walk using left and right values 
+        of the controllable_component
+        -> acceleration: the acceleration of the walk
+        -> idle_trigger: at witch speed should the iddle animation be triggered
+
+    jump_action: allow this entity to jump using the jump value 
+        of the controllable_component
+        -> acceleration: the force of the acceleration
+        -> step_count: the number of frame to apply the jump force
+        -> conterforce: the ammount of force pointed downward to apply to 
+            the entity when the jump is canceled before the end
+
+    live_component: allow this entity to reswpan and listen to win/kill actions
+        -> count: the number of lives (0 or negative for infinite)
+
+    win_component: trigger the win event when an entity with the live_component 
+        make contact with this entity
+
+    kill_component: make an entity that touch this one respawn if it has 
+        the live_component.
+
+    timer_component: update the renderer text to the time left 
+        and kill all entities with the live_component when the timer comes to 0.
+        -> time: the number of seconds for this timer.
+
+    camerafollow_component: make the camera follow this entity
+        PS: if multiple entities have this component, the camera will center
+            arround these entities. (warning: the camera doesn't zoom for now)
