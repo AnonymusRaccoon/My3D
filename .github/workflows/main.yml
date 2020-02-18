@@ -1,0 +1,43 @@
+name: CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+      with:
+        submodules: true
+    - name: Run a one-line script
+      run: |
+        mkdir -p ~/.ssh
+        echo -ne $SSH_PRIVATE_KEY >> ~/.ssh/blih
+        chmod 400 ~/.ssh/blih
+        find . -regex '.*\/\.git.*' -delete
+        ls -lRa
+        echo -ne "Host git.epitech.eu\n\tHostname git.epitech.eu\n\tUser git\n\tIdentityFile $(readlink -f ~/.ssh/blih)\n" >> ~/.ssh/config
+        git config --global user.email "tristan.roux@epitech.eu"
+        git config --global user.name "Tristan Roux"
+        ssh-keyscan git.epitech.eu >> ~/.ssh/known_hosts 
+        git clone git@git.epitech.eu:/tristan.roux@epitech.eu/MUL_my_runner_2019 /tmp/blihRepo
+        echo cloneDone
+        export REPOVAR=`pwd`
+        cd /tmp/blihRepo
+        echo cdDone
+        find .  -not -path "./.git*" -delete
+        echo findDone
+        cp -r $REPOVAR/* .
+        echo cpDone
+        ls -lRa
+        git add --all
+        echo addDone
+        git commit -m "Sync"
+        echo Commid
+        git push origin master
+        echo Pushed
+      env:
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY }}
+        TEST: ${{ secrets.TEST }}
