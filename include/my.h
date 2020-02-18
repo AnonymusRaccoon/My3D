@@ -60,7 +60,7 @@ void my_putstr(const char *str);
 
 void my_revstr(char *str);
 
-void my_showmem(const char *str);
+void my_showmem(char *str, int);
 
 void my_showstr(const char *str);
 

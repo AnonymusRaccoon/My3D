@@ -4,3 +4,6 @@
 **/vgcore*
 my_world
 **/ut
+.vscode/
+.idea/
+cmake-build-debug/

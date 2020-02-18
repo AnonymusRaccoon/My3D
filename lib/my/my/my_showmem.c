@@ -57,7 +57,7 @@ void print_str_to(char *ptr, int max)
     }
 }
 
-int my_showmem(char *str, int size)
+void my_showmem(char *str, int size)
 {
     int padding = size % 16;
     int line_count = padding == 0 ? size / 16 : size / 16 + 1;
@@ -70,5 +70,4 @@ int my_showmem(char *str, int size)
         print_str_to(ptr, 16);
         my_putchar('\n');
     }
-    return (0);
 }
