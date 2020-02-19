@@ -39,9 +39,9 @@ NAME = libmy.a
 
 UT = ut
 
-all: build
+all: $(NAME)
 
-build:
+$(NAME):
 	$(CC) -c $(SRC) $(INCLUDE) $(CFLAGS)
 	ar rc $(NAME) $(OBJ)
 

@@ -21,9 +21,9 @@ NAME = my_world
 
 CC = gcc
 
-all: build
+all: $(NAME)
 
-build: $(OBJ)
+$(NAME): $(OBJ)
 	$(MAKE) -C lib/gamacon
 	$(MAKE) -C lib/my
 	$(MAKE) -C lib/xmlparser
