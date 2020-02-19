@@ -62,7 +62,7 @@ void my_putstr(const char *str);
 
 void my_revstr(char *str);
 
-int my_showmem(char *str, int size);
+void my_showmem(char *str, int size);
 
 void my_showstr(const char *str);
 
