@@ -1,42 +1,42 @@
 <gc_map>
     <line>
-        <row height="0" />
-        <row height="0" />
-        <row height="0" />
-        <row height="0" />
-        <row height="0" />
-        <row height="0" />
-        <row height="0" />
-        <row height="0" />
-        <row height="0" />
-        <row height="0" />
-        <row height="0" />
+        <row height="00" />
+        <row height="01" />
+        <row height="02" />
+        <row height="03" />
+        <row height="04" />
+        <row height="05" />
+        <row height="06" />
+        <row height="07" />
+        <row height="08" />
+        <row height="09" />
+        <row height="09" />
     </line>
     <line>
-        <row height="0" />
-        <row height="0" />
-        <row height="0" />
-        <row height="0" />
-        <row height="5" />
         <row height="10" />
-        <row height="5" />
-        <row height="0" />
-        <row height="0" />
-        <row height="0" />
-        <row height="0" />
-    </line>
-    <line>
-        <row height="0" />
-        <row height="0" />
-        <row height="0" />
-        <row height="0" />
-        <row height="-60" />
-        <row height="-10" />
-        <row height="0" />
-        <row height="10" />
+        <row height="11" />
+        <row height="12" />
+        <row height="13" />
+        <row height="14" />
+        <row height="15" />
+        <row height="16" />
+        <row height="17" />
+        <row height="18" />
+        <row height="19" />
         <row height="20" />
-        <row height="0" />
-        <row height="0" />
+    </line>
+    <line>
+        <row height="20" />
+        <row height="21" />
+        <row height="22" />
+        <row height="23" />
+        <row height="24" />
+        <row height="25" />
+        <row height="26" />
+        <row height="27" />
+        <row height="28" />
+        <row height="29" />
+        <row height="30" />
     </line>
     <line>
         <row height="0" />
@@ -55,9 +55,9 @@
         <row height="0" />
         <row height="0" />
         <row height="0" />
-        <row height="0" />
-        <row height="0" />
-        <row height="0" />
+        <row height="-40" />
+        <row height="-50" />
+        <row height="-40" />
         <row height="0" />
         <row height="0" />
         <row height="0" />
@@ -69,9 +69,9 @@
         <row height="0" />
         <row height="0" />
         <row height="0" />
-        <row height="0" />
-        <row height="0" />
-        <row height="0" />
+        <row height="20" />
+        <row height="50" />
+        <row height="20" />
         <row height="0" />
         <row height="0" />
         <row height="0" />
