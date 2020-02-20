@@ -4,6 +4,12 @@
     </data>
     <gc_entities>
         <gc_entity>
+            <transform_component />
+            <renderer src="assets/sprites/grass.png">
+                <Rect height="auto" width="auto" top="0" left="0" />
+            </renderer>
+        </gc_entity>
+        <gc_entity>
             <transform_component>
                 <Position x="00" y="320" />
                 <Size x="100" y="100" />
