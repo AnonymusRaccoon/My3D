@@ -1,13 +1,15 @@
 <gc_scene>
     <data>
         <sprite src="assets/sprites/grass.png" />
+        <font src="assets/fonts/roboto.ttf" />
     </data>
     <gc_entities>
         <gc_entity>
             <transform_component />
-            <renderer src="assets/sprites/grass.png">
-                <Rect height="auto" width="auto" top="0" left="0" />
-            </renderer>
+            <renderer text="assets/sprites/grass.png" />
+			<fixed_to_cam>
+				<Position x="50%" y="50%" />
+			</fixed_to_cam>
         </gc_entity>
         <gc_entity>
             <transform_component>
@@ -16,9 +18,8 @@
             </transform_component>
             <vertex_component tilemap="prefabs/tilemap.gcmap" />
             <renderer vertex="tilemap">
-                <Rect height="auto" width="auto" top="0" left="0" /> 
+                <Rect height="auto" width="auto" top="0" left="0" />
             </renderer>
-            <camerafollow_component />
         </gc_entity>
     </gc_entities>
 </gc_scene>
