@@ -1,9 +1,11 @@
 <gc_scene>
     <data>
         <sprite src="assets/sprites/grass.png" />
+        <sprite name="button_background" src="assets/sprites/grass.png" />
         <font src="assets/fonts/roboto.ttf" />
     </data>
     <gc_entities>
+    	<button text="Button" x="75%" y="25%"/>
         <gc_entity>
             <transform_component />
             <renderer text="assets/sprites/grass.png" />

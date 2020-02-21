@@ -198,7 +198,7 @@ add_executable(My3D
         lib/xmlparser/src/xmlparser.c
         lib/xmlparser/src/xmlproperties.c
         src/game_loader.c
-        main.c)
+        main.c lib/gamacon/include/errors.h lib/gamacon/src/ui/button.c lib/gamacon/src/ui/setup_ui.c lib/gamacon/include/ui.h)
 
 add_compile_options(-W -Wall -Wextra -Wshadow)
 
