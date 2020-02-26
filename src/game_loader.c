@@ -12,11 +12,15 @@
 #include <SFML/System.h>
 #include <SFML/Window.h>
 
+void test(gc_engine *engine, int entity_id);
+
 int register_customcmps(gc_engine *engine)
 {
     engine->finish_physics(engine);
+	engine->add_callback(engine, "test", &test);
     return (0);
 }
+
 
 int create_game_scene(gc_engine *engine, const char *map)
 {
