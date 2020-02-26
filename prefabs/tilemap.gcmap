@@ -1,7 +1,7 @@
 <gc_map>
     <line>
-        <row height="00" />
-        <row height="01" />
+        <row height="189" />
+        <row height="178" />
         <row height="02" />
         <row height="03" />
         <row height="04" />
@@ -10,7 +10,7 @@
         <row height="07" />
         <row height="08" />
         <row height="09" />
-        <row height="09" />
+        <row height="109" />
     </line>
     <line>
         <row height="10" />
