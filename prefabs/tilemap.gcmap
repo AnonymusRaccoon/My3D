@@ -79,6 +79,7 @@
     </line>
     <line>
         <row height="0" />
+        <row height="200" />
         <row height="0" />
         <row height="0" />
         <row height="0" />
@@ -87,8 +88,7 @@
         <row height="0" />
         <row height="0" />
         <row height="0" />
-        <row height="0" />
-        <row height="0" />
+        <row height="200" />
     </line>
     <line>
         <row height="0" />
@@ -139,7 +139,7 @@
         <row height="0" />
         <row height="0" />
         <row height="0" />
-        <row height="0" />
-        <row height="0" />
+        <row height="40" />
+        <row height="50" />
     </line>
 </gc_map>
