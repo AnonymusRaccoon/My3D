@@ -23,6 +23,6 @@
 		<panel src="panel" x="100%" y="50%" width="50%" height="120%"/>
 		<text text="TEAMS" x="88%" y="40"/>
 		<panel src="front_panel" x="89%" y="95%" width="20%" height="8%" />
-		<text text="I forgot to register for the module,\n could you register me?" x="89%" y="95%" />
+		<text text="I forgot to register for the module,\n could you register me?" x="89%" y="97%" color="black" size="9"/>
     </gc_entities>
 </gc_scene>
