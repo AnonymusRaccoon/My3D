@@ -5,7 +5,7 @@
 ## Makefile
 ##
 
-SRC = main.c \
+SRC = src/main.c \
 	src/game_loader.c
 
 OBJ = $(SRC:%.c=%.o)
