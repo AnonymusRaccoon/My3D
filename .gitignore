@@ -8,3 +8,4 @@ my_world
 .vscode/
 .idea/
 cmake-build-debug/
+CmakeFiles/
