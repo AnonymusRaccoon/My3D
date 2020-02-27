@@ -5,7 +5,7 @@
         <font src="assets/fonts/roboto.ttf" />
     </data>
     <gc_entities>
-    	<panel src="panel" x="50%" y="40%" width="40%" height="60%"/>
+    	<panel src="panel" x="50%" y="40%" width="300" height="50%"/>
     	<text text="DPR tycoon" x="50%" y="25%"/>
     	<button text="Start Game" x="50%" y="50%" click="start_button" color="black" />
     </gc_entities>
