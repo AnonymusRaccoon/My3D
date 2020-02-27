@@ -10,4 +10,4 @@
 #define ERROR 84
 #include "scene.h"
 
-int start_game(const char *map);
+int start_game();
