@@ -23,7 +23,7 @@ CC = gcc
 
 all: build
 
-$(NAME): $(OBJ)
+build: $(OBJ)
 	$(MAKE) -C lib/gamacon
 	$(MAKE) -C lib/my
 	$(MAKE) -C lib/xmlparser
