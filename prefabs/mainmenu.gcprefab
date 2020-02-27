@@ -1,12 +1,12 @@
 <gc_scene>
     <data>
-        <sprite src="assets/sprites/grass.png" />
+        <sprite name="panel" src="assets/ui/panel.png" />
         <sprite name="button_background" src="assets/ui/button_background.png" />
         <font src="assets/fonts/roboto.ttf" />
     </data>
     <gc_entities>
-    	<panel src="assets/sprites/grass.png" x="50%" y="50%" width="100%" height="100%"/>
-    	<text text="DPR tyccoon" x="50%" y="25%"/>
+    	<panel src="panel" x="50%" y="40%" width="40%" height="60%"/>
+    	<text text="DPR tycoon" x="50%" y="25%"/>
     	<button text="Start Game" x="50%" y="50%" click="start_button" color="black" />
     </gc_entities>
 </gc_scene>
