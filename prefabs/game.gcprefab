@@ -9,15 +9,6 @@
         <font src="assets/fonts/roboto.ttf" />
     </data>
     <gc_entities>
-    	<panel src="assets/sprites/grass.png" x="50%" y="25%" width="25%" height="50%"/>
-    	<button text="Lorem ipsum." x="75%" y="25%" click="test" />
-        <gc_entity>
-            <transform_component />
-            <renderer text="assets/sprites/grass.png" />
-			<fixed_to_cam>
-				<Position x="50%" y="50%" />
-			</fixed_to_cam>
-        </gc_entity>
         <gc_entity>
             <transform_component>
                 <Position x="00" y="320" />

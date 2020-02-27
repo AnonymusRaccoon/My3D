@@ -1,3 +1,0 @@
-/home/cbihan/Delivery/MUL/My3D/CMakeFiles/rebuild_cache.dir
-/home/cbihan/Delivery/MUL/My3D/CMakeFiles/My3D.dir
-/home/cbihan/Delivery/MUL/My3D/CMakeFiles/edit_cache.dir

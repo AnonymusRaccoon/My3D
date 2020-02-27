@@ -9,15 +9,12 @@
 #include "setup.h"
 #include <SFML/System.h>
 
-void test(gc_engine *engine, int entity_id);
-
 int register_customcmps(gc_engine *engine)
 {
     engine->finish_physics(engine);
-	engine->add_callback(engine, "test", &test);
+	engine->add_callback(engine, "start_button", &start_button);
     return (0);
 }
-
 
 int create_game_scene(gc_engine *engine)
 {

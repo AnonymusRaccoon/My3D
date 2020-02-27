@@ -11,3 +11,5 @@
 #include "scene.h"
 
 int start_game();
+
+void start_button(gc_engine *engine, int entity_id);
