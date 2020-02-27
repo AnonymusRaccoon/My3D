@@ -6,7 +6,7 @@
 #include "scene.h"
 #include "my.h"
 
-void start_button(gc_engine *engine, int entity_id)
+bool start_button(gc_engine *engine, int entity_id)
 {
 	gc_scene *scene = scene_create(engine, "prefabs/game.gcprefab");
 	if (!scene) {
@@ -14,4 +14,11 @@ void start_button(gc_engine *engine, int entity_id)
 		my_printf("The game scene couldn't be found.\n");
 	}
 	engine->change_scene(engine, scene);
+	return (true);
+}
+
+bool quit(gc_engine *engine, int entity_id)
+{
+	engine->should_close = true;
+	return (true);
 }

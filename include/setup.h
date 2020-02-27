@@ -12,4 +12,5 @@
 
 int start_game();
 
-void start_button(gc_engine *engine, int entity_id);
+bool start_button(gc_engine *engine, int entity_id);
+bool quit(gc_engine *engine, int entity_id);

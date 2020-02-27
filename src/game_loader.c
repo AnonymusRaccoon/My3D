@@ -13,6 +13,7 @@ int register_customcmps(gc_engine *engine)
 {
     engine->finish_physics(engine);
 	engine->add_callback(engine, "start_button", &start_button);
+	engine->add_callback(engine, "quit", &quit);
     return (0);
 }
 
