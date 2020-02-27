@@ -1,4 +1,4 @@
-<gc_map>
+<gc_map >
     <line>
         <row height="0" />
         <row height="0" />
@@ -21,7 +21,7 @@
         <row height="15" />
         <row height="16" />
         <row height="17" />
-        <row height="18" />
+        <row heig    vert2->position = get_tile_coords(corners[3], corners[4], corners[5]);ht="18" />
         <row height="19" />
         <row height="20" />
     </line>

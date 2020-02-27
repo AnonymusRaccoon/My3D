@@ -207,6 +207,7 @@ add_executable(My3D
         lib/gamacon/src/components/clickable_component.c
         lib/gamacon/include/components/clickable_component.h
         lib/gamacon/src/systems/clickable_system.c
+        lib/gamacon/src/sfml_renderer/sfml_init.c
 )
 
 add_compile_options(-W -Wall -Wextra -Wshadow)
