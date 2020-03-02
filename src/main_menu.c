@@ -35,6 +35,8 @@ bool options(gc_engine *engine, int entity_id)
 	entity = engine->scene->get_entity(engine->scene, 50);
 	if (rend)
 		checkbox_update(engine->scene, entity, rend->is_fullscreen);
+	entity = engine->scene->get_entity(engine->scene, 51);
+	resolution_set_text(entity, engine);
 	return (true);
 }
 

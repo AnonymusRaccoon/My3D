@@ -15,7 +15,7 @@
 		<button x="60%" y="50%" click="fullscreen" sprite="cross" width="5%" height="%" background_id="50" />
 		<text text="Resolution" x="41%" y="60%"/>
 		<button x="53%" y="60%" click="resolution_down" sprite="left" width="2%" height="4%" />
-		<text text="800x400" x="59%" y="60%" size="18" />
+		<text x="59%" y="60%" size="18" text_id="51" />
 		<button x="65%" y="60%" click="resolution_up" sprite="right" width="2%" height="4%" />
 		<button text="Back" x="50%" y="72%" click="goto_main_menu" color="black" width="200" resize="false" />
 	</gc_entities>
