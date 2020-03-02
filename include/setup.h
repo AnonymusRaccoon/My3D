@@ -17,4 +17,6 @@ bool options(gc_engine *engine, int entity_id);
 bool goto_main_menu(gc_engine *engine, int entity_id);
 bool quit(gc_engine *engine, int entity_id);
 
+int checkbox_update(gc_scene *s, gc_entity *entity, bool checked);
+
 bool fullscreen(gc_engine *engine, int entity_id);
