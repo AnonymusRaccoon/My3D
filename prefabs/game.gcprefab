@@ -10,10 +10,12 @@
     </data>
     <gc_entities>
         <gc_entity>
+            <clickable_component click="map_manage_click"/>
             <transform_component>
-                <Position x="00" y="320" />
-                <Size x="100" y="100" />
+                <Position x="25" y="320" />
+                <Size x="100000000" y="100000000" />
             </transform_component>
+            <camerafollow_component />
             <vertex_component tilemap="prefabs/tilemap.gcmap" />
             <renderer vertex="tilemap">
                 <Rect height="auto" width="auto" top="0" left="0" />

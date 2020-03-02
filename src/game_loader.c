@@ -7,6 +7,7 @@
 
 #include "engine.h"
 #include "setup.h"
+#include "map_managment.h"
 #include <SFML/System.h>
 
 int register_customcmps(gc_engine *engine)
@@ -14,6 +15,7 @@ int register_customcmps(gc_engine *engine)
     engine->finish_physics(engine);
 	engine->add_callback(engine, "start_button", &start_button);
 	engine->add_callback(engine, "quit", &quit);
+	engine->add_callback(engine, "map_manage_click", &map_manage_click);
     return (0);
 }
 
