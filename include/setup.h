@@ -13,4 +13,13 @@
 int start_game();
 
 bool start_button(gc_engine *engine, int entity_id);
+bool options(gc_engine *engine, int entity_id);
+bool goto_main_menu(gc_engine *engine, int entity_id);
 bool quit(gc_engine *engine, int entity_id);
+
+int checkbox_update(gc_scene *s, gc_entity *entity, bool checked);
+void resolution_set_text(gc_entity *entity, gc_engine *engine);
+
+bool fullscreen(gc_engine *engine, int entity_id);
+bool resolution_down(gc_engine *engine, int entity_id);
+bool resolution_up(gc_engine *engine, int entity_id);
