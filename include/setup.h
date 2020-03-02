@@ -13,4 +13,8 @@
 int start_game();
 
 bool start_button(gc_engine *engine, int entity_id);
+bool options(gc_engine *engine, int entity_id);
+bool goto_main_menu(gc_engine *engine, int entity_id);
 bool quit(gc_engine *engine, int entity_id);
+
+bool fullscreen(gc_engine *engine, int entity_id);

@@ -1,0 +1,16 @@
+<gc_scene>
+    <data>
+        <sprite name="panel" src="assets/ui/panel.png" />
+        <sprite name="button_background" src="assets/ui/button_background.png" />
+        <sprite name="check" src="assets/ui/check.png" />
+		<sprite name="cross" src="assets/ui/cross.png" />
+        <font src="assets/fonts/roboto.ttf" />
+    </data>
+    <gc_entities>
+    	<panel src="panel" x="50%" y="45%" width="40%" height="65%"/>
+    	<text text="Options" x="50%" y="25%"/>
+    	<text text="Fullscreen" x="45%" y="50%" />
+    	<button x="60%" y="50%" click="fullscreen" sprite="check" width="5%" height="%" input="true" />
+		<button text="Back to main menu" x="50%" y="72%" click="goto_main_menu" color="black" width="200" resize="false" />
+    </gc_entities>
+</gc_scene>

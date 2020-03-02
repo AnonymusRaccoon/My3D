@@ -12,7 +12,31 @@ bool start_button(gc_engine *engine, int entity_id)
 	if (!scene) {
 		engine->should_close = true;
 		my_printf("The game scene couldn't be loaded.\n");
-		return (false);
+		return (true);
+	}
+	engine->change_scene(engine, scene);
+	return (true);
+}
+
+bool options(gc_engine *engine, int entity_id)
+{
+	gc_scene *scene = scene_create(engine, "prefabs/options.gcprefab");
+	if (!scene) {
+		engine->should_close = true;
+		my_printf("The option scene couldn't be loaded.\n");
+		return (true);
+	}
+	engine->change_scene(engine, scene);
+	return (true);
+}
+
+bool goto_main_menu(gc_engine *engine, int entity_id)
+{
+	gc_scene *scene = scene_create(engine, "prefabs/mainmenu.gcprefab");
+	if (!scene) {
+		engine->should_close = true;
+		my_printf("The option scene couldn't be loaded.\n");
+		return (true);
 	}
 	engine->change_scene(engine, scene);
 	return (true);
