@@ -7,10 +7,14 @@
 
 #include "engine.h"
 #include "setup.h"
+#include "components/teams_component.h"
+#include "systems/teams_system.h"
 #include <SFML/System.h>
 
 int register_customcmps(gc_engine *engine)
 {
+	engine->add_component(engine, &teams_component);
+	engine->add_system(engine, &teams_system);
     engine->finish_physics(engine);
 	engine->add_callback(engine, "start_button", &start_button);
 	engine->add_callback(engine, "options", &options);

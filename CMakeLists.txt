@@ -211,7 +211,7 @@ add_executable(My3D
         lib/my/my/my_str_replace.c
         lib/gamacon/src/sfml_renderer/sfml_init.c
         lib/gamacon/src/sfml_renderer/sfml_events.c
-        lib/xmlparser/src/otherget.c src/options.c lib/gamacon/src/components/input_component.c lib/gamacon/include/components/input_component.h)
+        lib/xmlparser/src/otherget.c src/options.c lib/gamacon/src/components/input_component.c lib/gamacon/include/components/input_component.h src/systems/teams_system.c include/systems/teams_system.h include/components/teams_component.h src/components/teams_component.c)
 
 add_compile_options(-W -Wall -Wextra -Wshadow)
 
