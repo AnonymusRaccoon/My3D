@@ -7,14 +7,16 @@
 
 #include "entity.h"
 #include "system.h"
-#include "sprite.h"
-#include "vector2.h"
 #include "prefab.h"
 #include "components/teams_component.h"
-#include "systems/teams_system.h"
 #include <stddef.h>
-#include <dirent.h>
 #include <stdlib.h>
+
+static void move_teams_up(gc_scene *scene)
+{
+	gc_list *list = scene->get_entity_by_cmp(scene, "tag_component");
+	//Should filter components by the tag teams and move them up.
+}
 
 static void update_entity(gc_engine *engine, void *system, gc_entity *entity, \
 float dtime)
@@ -24,6 +26,7 @@ float dtime)
 	team->next_teams -= dtime;
 	if (team->next_teams < 0 && team->prefab_count) {
 		team->next_teams = team->delay;
+		move_teams_up(engine->scene);
 		prefab_load(engine, team->prefabs[random() % team->prefab_count]);
 	}
 }
