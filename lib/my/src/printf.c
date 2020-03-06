@@ -11,20 +11,21 @@
 #include <unistd.h>
 
 formater_t formaters[] = {{string_formater, 's'},
-                          {string_nonprintable_formater, 'S'},
-                          {char_formater, 'c'},
-                          {int_formater, 'i'},
-                          {int_formater, 'd'},
-                          {octal_formater, 'o'},
-                          {hexa_formater, 'x'},
-                          {big_hexa_formater, 'X'},
-                          {uint_formater, 'u'},
-                          {ptr_formater, 'p'},
-                          {ubinary_formater, 'b'},
-                          {float_formater, 'f'},
-                          {float_formater, 'F'},
-                          {no_format, '%'},
-                          {0, 0}};
+    {string_nonprintable_formater, 'S'},
+    {char_formater, 'c'},
+    {int_formater, 'i'},
+    {int_formater, 'd'},
+    {octal_formater, 'o'},
+    {hexa_formater, 'x'},
+    {big_hexa_formater, 'X'},
+    {uint_formater, 'u'},
+    {ptr_formater, 'p'},
+    {ubinary_formater, 'b'},
+    {float_formater, 'f'},
+    {float_formater, 'F'},
+    {no_format, '%'},
+    {0, 0}
+};
 
 const char modifiersCst[] = "#0-+ hl";
 

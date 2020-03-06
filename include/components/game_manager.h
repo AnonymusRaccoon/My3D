@@ -7,16 +7,12 @@
 
 #include "component.h"
 
-struct teams_component
+struct game_manager
 {
 	gc_component base;
-	float next_teams;
-	float delay;
-	char **prefabs;
-	int *prefabs_size;
-	int prefab_count;
+	int happiness;
 };
 
-const struct teams_component teams_component;
+const struct game_manager game_manager;
 
 #endif //_TEAMS_COMPONENT_C_

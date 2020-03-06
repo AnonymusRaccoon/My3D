@@ -10,9 +10,14 @@
 #include "components/teams_component.h"
 #include "systems/teams_system.h"
 #include <SFML/System.h>
+#include "components/game_display.h"
+#include "components/game_manager.h"
 
 int register_customcmps(gc_engine *engine)
 {
+	engine->add_component(engine, &game_manager);
+	engine->add_component(engine, &game_display);
+	engine->add_system(engine, &game_display_system);
 	engine->add_component(engine, &teams_component);
 	engine->add_system(engine, &teams_system);
     engine->finish_physics(engine);

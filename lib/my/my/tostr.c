@@ -54,6 +54,9 @@ char *tostr(int n)
     int count = get_new_size(n);
     char *ret = malloc(sizeof(char) * (count + 1));
 
+    if (!ret)
+    	return (NULL);
+
     putnbr_in(n, base, ret, count);
     ret[count] = '\0';
     return (ret);

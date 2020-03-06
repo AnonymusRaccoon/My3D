@@ -5,10 +5,12 @@
         <sprite name="cross" src="assets/ui/cross.png" />
         <sprite name="front_panel" src="assets/ui/front_panel.png" />
 		<sprite name="button_background" src="assets/ui/button_background.png" />
+        <sprite name="happiness" src="assets/ui/happiness.png" />
         <sprite name="cobblestone" src="assets/sprites/cobblestone.png" />
         <sprite name="mossy_cobblestone" src="assets/sprites/cobblestone_mossy.png" />
         <sprite name="command_block" src="assets/sprites/command_block.png" />
         <sprite name="crafting_table" src="assets/sprites/crafting_table_top.png" />
+		<music src="assets/musics/music.ogg"/>
         <font src="assets/fonts/roboto.ttf" />
     </data>
     <gc_entities>
@@ -24,17 +26,20 @@
         </gc_entity>
 
 		<gc_entity>
-			<teams_component delay="10">
-				<prefab src="prefabs/teams/forgot_register.gcprefab" />
+			<game_manager happiness="50%" />
+			<teams_component delay="5">
+				<prefab src="prefabs/teams/forgot_register.gcprefab" height="20%" />
+				<prefab src="prefabs/teams/absent.gcprefab" height="20%" />
 			</teams_component>
 		</gc_entity>
 
 		<panel src="panel" x="100%" y="50%" width="50%" height="120%"/>
 		<text text="TEAMS" x="88%" y="40"/>
 
-		<panel src="front_panel" x="89%" y="70%" width="20%" height="8%" />
-		<text text="I was absent today at the talk.\nCould you set my status as present?" x="89%" y="72%" color="black" size="9" />
-		<panel src="check" x="85%" y="75%" width="3%" height="%" />
-		<panel src="cross" x="93%" y="75%" width="3%" height="%" />
+		<panel src="panel" x="50%" y="98%" width="120%" height="4%"/>
+		<panel src="happiness" x="3%" y="98%" width="%" height="3%"/>
+		<text text="100%" x="6%" y="98%" size="13">
+			<game_display stats="happiness" />
+		</text>
     </gc_entities>
 </gc_scene>
