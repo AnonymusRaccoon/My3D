@@ -55,7 +55,7 @@ int my_getnbr(const char *str)
     int start_index = -1;
     char c;
 
-    for (int i = 0; 1; i++) {
+    for (int i = 0; str[i]; i++) {
         c = str[i];
         if ((c >= '0' && c <= '9') || c == '-' || c == '+') {
             if (start_index == -1)
@@ -65,5 +65,7 @@ int my_getnbr(const char *str)
         else if (count > 0 || c == '\0')
             break;
     }
+    if (count <= 0)
+    	return (0);
     return init_print(str, count, start_index);
 }
