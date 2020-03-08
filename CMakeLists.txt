@@ -213,8 +213,11 @@ add_executable(My3D
         lib/gamacon/src/sfml_renderer/sfml_events.c
         lib/gamacon/src/components/map_managment.c
         lib/gamacon/include/components/map_managment.h
+        lib/xmlparser/src/otherget.c
+        src/options.c
+        lib/gamacon/src/components/input_component.c
+        lib/gamacon/include/components/input_component.h
 )
-        lib/xmlparser/src/otherget.c src/options.c lib/gamacon/src/components/input_component.c lib/gamacon/include/components/input_component.h)
 
 add_compile_options(-W -Wall -Wextra -Wshadow)
 
