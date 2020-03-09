@@ -57,3 +57,8 @@ bool quit(gc_engine *engine, int entity_id, gc_vector2 _)
 	engine->should_close = true;
 	return (true);
 }
+
+bool catch(gc_engine *engine, int entity_id, gc_vector2 _)
+{
+	return (true);
+}

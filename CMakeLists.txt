@@ -235,7 +235,9 @@ add_executable(My3D
         src/systems/game_display_system.c
         src/teams/absent.c
         src/teams/forgot.c include/teams.h
-        src/systems/game_manager_system.c include/systems/game_manager_system.h)
+        src/systems/game_manager_system.c
+        include/systems/game_manager_system.h
+        lib/gamacon/include/keybindings.h)
 
 add_compile_options(-W -Wall -Wextra -Wshadow)
 

@@ -16,6 +16,8 @@ bool start_button(gc_engine *engine, int entity_id, gc_vector2 _);
 bool options(gc_engine *engine, int entity_id, gc_vector2 _);
 bool goto_main_menu(gc_engine *engine, int entity_id, gc_vector2 _);
 bool quit(gc_engine *engine, int entity_id, gc_vector2 _);
+bool catch(gc_engine *engine, int entity_id, gc_vector2 _);
+bool toggle_pause(gc_engine *engine, int entity_id, gc_vector2 _);
 
 int checkbox_update(gc_scene *s, gc_entity *entity, bool checked);
 void resolution_set_text(gc_entity *entity, gc_engine *engine);

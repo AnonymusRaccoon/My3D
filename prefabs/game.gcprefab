@@ -10,6 +10,7 @@
         <sprite name="cobblestone" src="assets/sprites/cobblestone.png" />
         <sprite name="mossy_cobblestone" src="assets/sprites/cobblestone_mossy.png" />
         <sprite name="command_block" src="assets/sprites/command_block.png" />
+		<sprite name="black_background" src="assets/ui/black_background.png" />
         <sprite name="crafting_table" src="assets/sprites/crafting_table_top.png" />
 		<music src="assets/musics/music.ogg"/>
         <font src="assets/fonts/roboto.ttf" />

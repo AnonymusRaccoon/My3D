@@ -2,9 +2,32 @@
 // Created by anonymus-raccoon on 3/9/20.
 //
 
+#include <components/tag_component.h>
+#include "my.h"
+#include "prefab.h"
+#include "keybindings.h"
 #include "system.h"
 #include "components/game_manager.h"
-#include "prefab.h"
+
+static void pause_destroy(gc_scene *scene)
+{
+	gc_list *list = scene->get_entity_by_cmp(scene, "tag_component");
+
+	for (gc_list *li = list; li; li = li->next ) {
+		if (!my_strcmp(GETCMP(li->data, tag_component)->tag, "pause"))
+			((gc_entity *)li->data)->destroy(li->data, scene);
+	}
+}
+
+bool toggle_pause(gc_engine *engine, int entity_id, gc_vector2 _)
+{
+	if (!engine->scene->is_paused)
+		prefab_load(engine, "prefabs/pause.gcprefab");
+	else
+		pause_destroy(engine->scene);
+	engine->scene->is_paused = !engine->scene->is_paused;
+	return (true);
+}
 
 static void update_entity(gc_engine *engine, void *system, gc_entity *entity, \
 float dtime)
@@ -19,6 +42,9 @@ float dtime)
 
 	if (gameover_scene)
 		engine->change_scene(engine, gameover_scene);
+	if (engine->is_keypressed(ESCAPE)) {
+		toggle_pause(engine, 0, (gc_vector2){0, 0});
+	}
 }
 
 

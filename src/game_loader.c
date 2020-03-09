@@ -37,6 +37,8 @@ int register_customcmps(gc_engine *engine)
 	engine->add_callback(engine, "absent_cross", &absent_cross);
 	engine->add_callback(engine, "forgot_lmfao", &forgot_lmfao);
 	engine->add_callback(engine, "forgot_ok", &forgot_ok);
+	engine->add_callback(engine, "catch", &catch);
+	engine->add_callback(engine, "toggle_pause", &toggle_pause);
     return (0);
 }
 
