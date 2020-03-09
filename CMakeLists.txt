@@ -206,7 +206,7 @@ add_executable(My3D
         src/main_menu.c
         lib/gamacon/src/components/clickable_component.c
         lib/gamacon/include/components/clickable_component.h
-        lib/gamacon/src/systems/clickable_system.c
+        lib/gamacon/src/systems/clickable_manager.c
         lib/gamacon/src/sfml_renderer/sfml_events.c
         lib/my/my/my_str_replace.c
         lib/gamacon/src/sfml_renderer/sfml_init.c
@@ -233,7 +233,9 @@ add_executable(My3D
         include/components/game_display.h
         src/components/game_display.c
         src/systems/game_display_system.c
-)
+        lib/gamacon/src/components/tile_collision_manager.c
+        lib/gamacon/include/components/tile_collision_manager.h
+        lib/gamacon/src/engine/event_manager.c lib/gamacon/include/event_manager.h)
 
 add_compile_options(-W -Wall -Wextra -Wshadow)
 
