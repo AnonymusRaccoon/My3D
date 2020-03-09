@@ -30,6 +30,8 @@ float dtime)
 		return;
 	if (disp->type == HAPPINESS_DISPLAY)
 		sprintf(((gc_text *)rend->data)->text, "%d%%", manager->happiness);
+	else
+		sprintf(((gc_text *)rend->data)->text, "%d%%", manager->stupidity);
 }
 
 static void destroy(void *system)

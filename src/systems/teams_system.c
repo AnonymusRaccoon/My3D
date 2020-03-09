@@ -16,7 +16,7 @@
 #include <components/game_manager.h>
 #include "my.h"
 
-static bool move_teams_up(gc_scene *scene, float amount)
+bool teams_move_up(gc_scene *scene, float amount, float y_level)
 {
 	gc_list *list = scene->get_entity_by_cmp(scene, "tag_component");
 	struct fixed_to_cam *fc;
@@ -28,7 +28,7 @@ static bool move_teams_up(gc_scene *scene, float amount)
 		if (my_strcmp(tc->tag, "teams"))
 			continue;
 		fc = GETCMP(list->data, fixed_to_cam);
-		if (!fc)
+		if (!fc || fc->pos.y < y_level)
 			continue;
 		fc->pos.y -= amount;
 		if (fc->pos.y < 15) {
@@ -43,19 +43,19 @@ static void update_entity(gc_engine *engine, void *system, gc_entity *entity, \
 float dtime)
 {
 	struct teams_component *team = GETCMP(entity, teams_component);
-	gc_scene *scene = engine->scene;
-	struct gc_list *m = scene->get_entity_by_cmp(scene, "game_manager");
-	struct game_manager *manager;
+	struct game_manager *manager = GETCMP(entity, game_manager);
 	int index;
 
+	if (!manager) {
+		my_printf("No game manager found. Teams is disabled.\n");
+		return;
+	}
 	team->next_teams -= dtime;
 	if (team->next_teams < 0 && team->prefab_count) {
 		index = random() % team->prefab_count;
 		team->next_teams = team->delay;
-		if (move_teams_up(engine->scene, team->prefabs_size[index]) && m) {
-			manager = GETCMP(m->data, game_manager);
+		if (teams_move_up(engine->scene, team->prefabs_size[index], 0))
 			manager->happiness -= 10;
-		}
 		prefab_load(engine, team->prefabs[index]);
 	}
 }

@@ -9,7 +9,8 @@
 
 typedef enum display_type
 {
-	HAPPINESS_DISPLAY
+	HAPPINESS_DISPLAY,
+	STUPIDITY_DISPLAY
 } display_type;
 
 struct game_display

@@ -23,3 +23,6 @@ void resolution_set_text(gc_entity *entity, gc_engine *engine);
 bool fullscreen(gc_engine *engine, int entity_id);
 bool resolution_down(gc_engine *engine, int entity_id);
 bool resolution_up(gc_engine *engine, int entity_id);
+
+
+bool absent_check(gc_engine *engine, int entity_id);
