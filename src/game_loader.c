@@ -14,10 +14,12 @@
 #include "teams.h"
 #include "components/game_display.h"
 #include "components/game_manager.h"
+#include "systems/game_manager_system.h"
 
 int register_customcmps(gc_engine *engine)
 {
 	engine->add_component(engine, &game_manager);
+	engine->add_system(engine, &game_manager_system);
 	engine->add_component(engine, &game_display);
 	engine->add_system(engine, &game_display_system);
 	engine->add_component(engine, &teams_component);
