@@ -6,9 +6,11 @@
         <sprite name="front_panel" src="assets/ui/front_panel.png" />
 		<sprite name="button_background" src="assets/ui/button_background.png" />
         <sprite name="happiness" src="assets/ui/happiness.png" />
+        <sprite name="clown" src="assets/ui/clown.png" />
         <sprite name="cobblestone" src="assets/sprites/cobblestone.png" />
         <sprite name="mossy_cobblestone" src="assets/sprites/cobblestone_mossy.png" />
         <sprite name="command_block" src="assets/sprites/command_block.png" />
+		<sprite name="black_background" src="assets/ui/black_background.png" />
         <sprite name="crafting_table" src="assets/sprites/crafting_table_top.png" />
 		<music src="assets/musics/music.ogg"/>
         <font src="assets/fonts/roboto.ttf" />
@@ -28,7 +30,7 @@
         </gc_entity>
 
 		<gc_entity>
-			<game_manager happiness="50%" />
+			<game_manager happiness="50%" stupidity="0%" />
 			<teams_component delay="5">
 				<prefab src="prefabs/teams/forgot_register.gcprefab" height="20%" />
 				<prefab src="prefabs/teams/absent.gcprefab" height="20%" />
@@ -42,6 +44,10 @@
 		<panel src="happiness" x="3%" y="98%" width="%" height="3%"/>
 		<text text="100%" x="6%" y="98%" size="13">
 			<game_display stats="happiness" />
+		</text>
+		<panel src="clown" x="10%" y="98%" width="%" height="3%"/>
+		<text text="100%" x="13%" y="98%" size="13">
+			<game_display stats="stupidity" />
 		</text>
     </gc_entities>
 </gc_scene>

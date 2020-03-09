@@ -16,6 +16,7 @@ static void ctr(void *component, va_list args)
 	struct game_manager *cmp = (struct game_manager *)component;
 
 	cmp->happiness = va_arg(args, int);
+	cmp->stupidity = va_arg(args, int);
 }
 
 static void fdctr(gc_entity *entity, gc_scene *scene, void *component, node *n)
@@ -23,6 +24,7 @@ static void fdctr(gc_entity *entity, gc_scene *scene, void *component, node *n)
 	struct game_manager *cmp = (struct game_manager *)component;
 
 	cmp->happiness = xml_getintprop(n, "happiness");
+	cmp->stupidity = xml_getintprop(n, "stupidity");
 	if (scene->get_entity_by_cmp(scene, "game_manager"))
 		my_printf(MULTIPLE_GAME_MGR_ERROR);
 }

@@ -8,7 +8,7 @@
 #include "setup.h"
 #include "my.h"
 
-bool start_button(gc_engine *engine, int entity_id)
+bool start_button(gc_engine *engine, int entity_id, gc_vector2 _)
 {
 	gc_scene *scene = scene_create(engine, "prefabs/game.gcprefab");
 	if (!scene) {
@@ -20,7 +20,7 @@ bool start_button(gc_engine *engine, int entity_id)
 	return (true);
 }
 
-bool options(gc_engine *engine, int entity_id)
+bool options(gc_engine *engine, int entity_id, gc_vector2 _)
 {
 	gc_scene *scene = scene_create(engine, "prefabs/options.gcprefab");
 	gc_entity *entity;
@@ -40,7 +40,7 @@ bool options(gc_engine *engine, int entity_id)
 	return (true);
 }
 
-bool goto_main_menu(gc_engine *engine, int entity_id)
+bool goto_main_menu(gc_engine *engine, int entity_id, gc_vector2 _)
 {
 	gc_scene *scene = scene_create(engine, "prefabs/mainmenu.gcprefab");
 	if (!scene) {
@@ -52,8 +52,13 @@ bool goto_main_menu(gc_engine *engine, int entity_id)
 	return (true);
 }
 
-bool quit(gc_engine *engine, int entity_id)
+bool quit(gc_engine *engine, int entity_id, gc_vector2 _)
 {
 	engine->should_close = true;
+	return (true);
+}
+
+bool catch(gc_engine *engine, int entity_id, gc_vector2 _)
+{
 	return (true);
 }

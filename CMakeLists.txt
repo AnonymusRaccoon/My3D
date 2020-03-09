@@ -235,7 +235,14 @@ add_executable(My3D
         src/systems/game_display_system.c
         lib/gamacon/src/components/tile_collision_manager.c
         lib/gamacon/include/components/tile_collision_manager.h
-        lib/gamacon/src/engine/event_manager.c lib/gamacon/include/event_manager.h)
+        lib/gamacon/src/engine/event_manager.c
+        lib/gamacon/include/event_manager.h
+        src/teams/absent.c
+        src/teams/forgot.c include/teams.h
+        src/systems/game_manager_system.c
+        include/systems/game_manager_system.h
+        lib/gamacon/include/keybindings.h
+    )
 
 add_compile_options(-W -Wall -Wextra -Wshadow)
 

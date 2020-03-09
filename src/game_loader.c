@@ -11,12 +11,15 @@
 #include "components/teams_component.h"
 #include "systems/teams_system.h"
 #include <SFML/System.h>
+#include "teams.h"
 #include "components/game_display.h"
 #include "components/game_manager.h"
+#include "systems/game_manager_system.h"
 
 int register_customcmps(gc_engine *engine)
 {
 	engine->add_component(engine, &game_manager);
+	engine->add_system(engine, &game_manager_system);
 	engine->add_component(engine, &game_display);
 	engine->add_system(engine, &game_display_system);
 	engine->add_component(engine, &teams_component);
@@ -30,6 +33,12 @@ int register_customcmps(gc_engine *engine)
 	engine->add_callback(engine, "fullscreen", &fullscreen);
 	engine->add_callback(engine, "resolution_down", &resolution_down);
 	engine->add_callback(engine, "resolution_up", &resolution_up);
+	engine->add_callback(engine, "absent_check", &absent_check);
+	engine->add_callback(engine, "absent_cross", &absent_cross);
+	engine->add_callback(engine, "forgot_lmfao", &forgot_lmfao);
+	engine->add_callback(engine, "forgot_ok", &forgot_ok);
+	engine->add_callback(engine, "catch", &catch);
+	engine->add_callback(engine, "toggle_pause", &toggle_pause);
     return (0);
 }
 

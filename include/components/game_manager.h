@@ -11,6 +11,7 @@ struct game_manager
 {
 	gc_component base;
 	int happiness;
+	int stupidity;
 };
 
 const struct game_manager game_manager;
