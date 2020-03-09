@@ -11,6 +11,7 @@
 #include "components/teams_component.h"
 #include "systems/teams_system.h"
 #include <SFML/System.h>
+#include "teams.h"
 #include "components/game_display.h"
 #include "components/game_manager.h"
 
@@ -32,6 +33,8 @@ int register_customcmps(gc_engine *engine)
 	engine->add_callback(engine, "resolution_up", &resolution_up);
 	engine->add_callback(engine, "absent_check", &absent_check);
 	engine->add_callback(engine, "absent_cross", &absent_cross);
+	engine->add_callback(engine, "forgot_lmfao", &forgot_lmfao);
+	engine->add_callback(engine, "forgot_ok", &forgot_ok);
     return (0);
 }
 

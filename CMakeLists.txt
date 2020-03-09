@@ -234,7 +234,7 @@ add_executable(My3D
         src/components/game_display.c
         src/systems/game_display_system.c
         src/teams/absent.c
-)
+        src/teams/forgot.c include/teams.h)
 
 add_compile_options(-W -Wall -Wextra -Wshadow)
 
