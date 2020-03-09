@@ -12,17 +12,18 @@
 
 int start_game();
 
-bool start_button(gc_engine *engine, int entity_id);
-bool options(gc_engine *engine, int entity_id);
-bool goto_main_menu(gc_engine *engine, int entity_id);
-bool quit(gc_engine *engine, int entity_id);
+bool start_button(gc_engine *engine, int entity_id, gc_vector2 _);
+bool options(gc_engine *engine, int entity_id, gc_vector2 _);
+bool goto_main_menu(gc_engine *engine, int entity_id, gc_vector2 _);
+bool quit(gc_engine *engine, int entity_id, gc_vector2 _);
 
 int checkbox_update(gc_scene *s, gc_entity *entity, bool checked);
 void resolution_set_text(gc_entity *entity, gc_engine *engine);
 
-bool fullscreen(gc_engine *engine, int entity_id);
-bool resolution_down(gc_engine *engine, int entity_id);
-bool resolution_up(gc_engine *engine, int entity_id);
+bool fullscreen(gc_engine *engine, int entity_id, gc_vector2 _);
+bool resolution_down(gc_engine *engine, int entity_id, gc_vector2 _);
+bool resolution_up(gc_engine *engine, int entity_id, gc_vector2 _);
 
 
-bool absent_check(gc_engine *engine, int entity_id);
+bool absent_check(gc_engine *engine, int entity_id, gc_vector2 _);
+bool absent_cross(gc_engine *engine, int entity_id, gc_vector2 _);

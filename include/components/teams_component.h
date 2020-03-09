@@ -20,5 +20,6 @@ struct teams_component
 const struct teams_component teams_component;
 
 bool teams_move_up(gc_scene *scene, float amount, float y_level);
+void pm_clicked(gc_engine *engine, int id);
 
 #endif //_TEAMS_COMPONENT_C_

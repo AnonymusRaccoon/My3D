@@ -31,6 +31,7 @@ int register_customcmps(gc_engine *engine)
 	engine->add_callback(engine, "resolution_down", &resolution_down);
 	engine->add_callback(engine, "resolution_up", &resolution_up);
 	engine->add_callback(engine, "absent_check", &absent_check);
+	engine->add_callback(engine, "absent_cross", &absent_cross);
     return (0);
 }
 
