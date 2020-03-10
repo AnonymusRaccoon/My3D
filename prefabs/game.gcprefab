@@ -42,11 +42,11 @@
 
 		<panel src="panel" x="50%" y="98%" width="120%" height="4%"/>
 		<panel src="happiness" x="3%" y="98%" width="%" height="3%"/>
-		<text text="100%" x="6%" y="98%" size="13">
+		<text text="100%" x="6%" y="98%" size="13" tooltip="The level of happiness of your students.\n" padding_x="17">
 			<game_display stats="happiness" />
 		</text>
-		<panel src="clown" x="10%" y="98%" width="%" height="3%"/>
-		<text text="100%" x="13%" y="98%" size="13">
+		<panel src="clown" x="10%" y="98%" width="%" height="3%" />
+		<text text="100%" x="13%" y="98%" size="13" tooltip="The level of stupidity of your students.\nThey start doing stupid things if you'are too kind with them.\n\nYou will loose if this stat reach 100%" padding_x="17">
 			<game_display stats="stupidity" />
 		</text>
     </gc_entities>

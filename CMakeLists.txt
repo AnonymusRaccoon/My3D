@@ -242,7 +242,14 @@ add_executable(My3D
         src/systems/game_manager_system.c
         include/systems/game_manager_system.h
         lib/gamacon/include/keybindings.h
-        lib/gamacon/src/components/map_interactions.c lib/gamacon/include/map_interactions.h)
+        lib/gamacon/src/components/map_interactions.c
+        lib/gamacon/include/map_interactions.h
+        lib/gamacon/include/keybindings.h
+        lib/gamacon/src/ui/tooltip.c
+        lib/gamacon/src/components/tooltip_component.c
+        lib/gamacon/include/components/tooltip_component.h
+        lib/gamacon/src/systems/tooltip_system.c
+)
 
 add_compile_options(-W -Wall -Wextra -Wshadow)
 
