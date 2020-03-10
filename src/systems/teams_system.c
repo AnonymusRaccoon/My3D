@@ -67,6 +67,8 @@ float dtime)
 		my_printf("No game manager found. Teams is disabled.\n");
 		return;
 	}
+	if (engine->scene->is_paused)
+		return;
 	team->next_teams -= dtime;
 	if (team->next_teams < 0 && team->prefab_count) {
 		index = random() % team->prefab_count;

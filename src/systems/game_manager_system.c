@@ -9,24 +9,30 @@
 #include "system.h"
 #include "components/game_manager.h"
 
-static void pause_destroy(gc_scene *scene)
+bool toggle_pause(gc_engine *engine)
 {
-	gc_list *list = scene->get_entity_by_cmp(scene, "tag_component");
+	gc_scene *scene = engine->scene;
+	gc_list *list;
 
+	scene->is_paused = !scene->is_paused;
+	if (scene->is_paused) {
+		prefab_load(engine, "prefabs/pause.gcprefab");
+		return (true);
+	}
+	list = scene->get_entity_by_cmp(scene, "tag_component");
 	for (gc_list *li = list; li; li = li->next ) {
 		if (!my_strcmp(GETCMP(li->data, tag_component)->tag, "pause"))
 			((gc_entity *)li->data)->destroy(li->data, scene);
 	}
+	return (true);
 }
 
-bool toggle_pause(gc_engine *engine, int entity_id, gc_vector2 _)
+static void key_pressed(gc_engine *engine, va_list args)
 {
-	if (!engine->scene->is_paused)
-		prefab_load(engine, "prefabs/pause.gcprefab");
-	else
-		pause_destroy(engine->scene);
-	engine->scene->is_paused = !engine->scene->is_paused;
-	return (true);
+	gc_keybindings key = va_arg(args, gc_keybindings);
+
+	if (key == ESCAPE)
+		toggle_pause(engine);
 }
 
 static void update_entity(gc_engine *engine, void *system, gc_entity *entity, \
@@ -42,24 +48,22 @@ float dtime)
 
 	if (gameover_scene)
 		engine->change_scene(engine, gameover_scene);
-	if (engine->is_keypressed(ESCAPE)) {
-		toggle_pause(engine, 0, (gc_vector2){0, 0});
-	}
 }
 
-
-static void destroy(void *system)
+static void ctr(void *system, va_list list)
 {
-	(void)system;
+	gc_engine *engine = va_arg(list, gc_engine *);
+
+	engine->add_event_listener(engine, "key_pressed", &key_pressed);
 }
 
 const gc_system game_manager_system = {
 	name: "game_cycle",
 	component_name: "game_manager",
 	size: sizeof(gc_system),
-	ctr: NULL,
+	ctr: ctr,
 	dtr: NULL,
 	check_dependencies: &system_check_dependencies,
 	update_entity: &update_entity,
-	destroy: &destroy
+	destroy: &system_destroy
 };

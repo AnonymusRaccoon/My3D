@@ -19,7 +19,7 @@
 int register_customcmps(gc_engine *engine)
 {
 	engine->add_component(engine, &game_manager);
-	engine->add_system(engine, &game_manager_system);
+	engine->add_system(engine, new_system(&game_manager_system, engine));
 	engine->add_component(engine, &game_display);
 	engine->add_system(engine, &game_display_system);
 	engine->add_component(engine, &teams_component);
