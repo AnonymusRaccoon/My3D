@@ -12,7 +12,7 @@ char *my_str_replace(char *str, const char *to_replace, char c)
 	while ((p = my_strstr(str, to_replace))) {
 		*p = c;
 		p++;
-		for (char *ptr = p + len; *ptr; ptr++, p++)
+		for (char *ptr = p + len - 1; *ptr; ptr++, p++)
 			*p = *ptr;
 		*p = '\0';
 	}
