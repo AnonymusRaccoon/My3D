@@ -23,14 +23,12 @@ void pm_destroy(gc_scene *scene, int prefab_id)
 			((gc_entity *)ent->data)->destroy(ent->data, scene);
 }
 
-void pm_clicked(gc_engine *engine, int id)
+void pm_clicked(gc_engine *engine, gc_entity *entity)
 {
-	gc_scene *scene = engine->scene;
-	gc_entity *entity = scene->get_entity(scene, id);
 	float y_pos = GETCMP(entity, fixed_to_cam)->pos.y;
 
-	pm_destroy(scene, entity->prefab_id);
-	teams_move_up(scene, -15, y_pos);
+	pm_destroy(engine->scene, entity->prefab_id);
+	teams_move_up(engine->scene, -15, y_pos);
 }
 
 bool teams_move_up(gc_scene *scene, float amount, float y_level)

@@ -53,9 +53,8 @@ void resolution_set_text(gc_entity *entity, gc_engine *engine)
 	((gc_text *)renderer->data)->text = resolution;
 }
 
-bool fullscreen(gc_engine *engine, int entity_id, gc_vector2 _)
+bool fullscreen(gc_engine *engine, gc_entity *entity, gc_vector2 _)
 {
-	gc_entity *entity = engine->scene->get_entity(engine->scene, entity_id);
 	struct sfml_renderer_system *rend = GETSYS(engine, sfml_renderer_system);
 
 	if (!rend)
@@ -74,7 +73,7 @@ rend->resolution.y, 32}, "My3D", sfDefaultStyle, NULL);
 	return (true);
 }
 
-bool resolution_down(gc_engine *engine, int entity_id, gc_vector2 _)
+bool resolution_down(gc_engine *engine, gc_entity *entity, gc_vector2 _)
 {
 	struct sfml_renderer_system *rend = GETSYS(engine, sfml_renderer_system);
 	int i = 2;
@@ -92,7 +91,7 @@ bool resolution_down(gc_engine *engine, int entity_id, gc_vector2 _)
 	return (true);
 }
 
-bool resolution_up(gc_engine *engine, int entity_id, gc_vector2 _)
+bool resolution_up(gc_engine *engine, gc_entity *entity, gc_vector2 _)
 {
 	struct sfml_renderer_system *rend = GETSYS(engine, sfml_renderer_system);
 	int i = 0;

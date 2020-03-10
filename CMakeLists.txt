@@ -234,7 +234,7 @@ add_executable(My3D
         src/components/game_display.c
         src/systems/game_display_system.c
         lib/gamacon/src/components/tile_collision_manager.c
-        lib/gamacon/include/components/tile_collision_manager.h
+        lib/gamacon/include/tile_collision_manager.h
         lib/gamacon/src/engine/event_manager.c
         lib/gamacon/include/event_manager.h
         src/teams/absent.c

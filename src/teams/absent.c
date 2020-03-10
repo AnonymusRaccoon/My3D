@@ -8,7 +8,7 @@
 #include "components/teams_component.h"
 #include "engine.h"
 
-bool absent_check(gc_engine *engine, int id)
+bool absent_check(gc_engine *engine, gc_entity *entity)
 {
 	gc_scene *scene = engine->scene;
 	gc_list *li = scene->get_entity_by_cmp(scene, "game_manager");
@@ -17,11 +17,11 @@ bool absent_check(gc_engine *engine, int id)
 		return (false);
 	GETCMP(li->data, game_manager)->happiness += 3;
 	GETCMP(li->data, game_manager)->stupidity += random() % 5;
-	pm_clicked(engine, id);
+	pm_clicked(engine, entity);
 	return (true);
 }
 
-bool absent_cross(gc_engine *engine, int id)
+bool absent_cross(gc_engine *engine, gc_entity *entity)
 {
 	gc_scene *scene = engine->scene;
 	gc_list *li = scene->get_entity_by_cmp(scene, "game_manager");
@@ -30,6 +30,6 @@ bool absent_cross(gc_engine *engine, int id)
 		return (false);
 	GETCMP(li->data, game_manager)->happiness -= 3;
 	GETCMP(li->data, game_manager)->stupidity -= random() % 5;
-	pm_clicked(engine, id);
+	pm_clicked(engine, entity);
 	return (true);
 }

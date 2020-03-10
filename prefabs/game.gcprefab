@@ -37,6 +37,8 @@
 			</teams_component>
 		</gc_entity>
 
+		<panel src="panel" x="7%" y="3%" width="30%" height="6%"/>
+
 		<panel src="panel" x="100%" y="50%" width="50%" height="120%"/>
 		<text text="TEAMS" x="88%" y="40"/>
 
