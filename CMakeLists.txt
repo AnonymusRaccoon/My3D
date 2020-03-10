@@ -69,7 +69,7 @@ add_executable(My3D
         lib/gamacon/src/components/parallax_component.c
         lib/gamacon/src/components/renderer.c
         lib/gamacon/src/components/transform_component.c
-        lib/gamacon/src/components/vertex_component.c
+        lib/gamacon/src/components/renderers/vertex_component.c
         lib/gamacon/src/deserializer/deserialize_entity.c
         lib/gamacon/src/deserializer/prefab.c
         lib/gamacon/src/engine/discard_player.c
@@ -211,7 +211,7 @@ add_executable(My3D
         lib/my/my/my_str_replace.c
         lib/gamacon/src/sfml_renderer/sfml_init.c
         lib/gamacon/src/sfml_renderer/sfml_events.c
-        lib/gamacon/src/components/map_managment.c
+        lib/gamacon/src/components/renderers/map_managment.c
         lib/gamacon/include/components/map_managment.h
         lib/xmlparser/src/otherget.c
         src/options.c
@@ -242,7 +242,7 @@ add_executable(My3D
         src/systems/game_manager_system.c
         include/systems/game_manager_system.h
         lib/gamacon/include/keybindings.h
-        lib/gamacon/src/components/map_interactions.c
+        lib/gamacon/src/components/renderers/map_interactions.c
         lib/gamacon/include/map_interactions.h
         lib/gamacon/include/keybindings.h
         lib/gamacon/src/ui/tooltip.c

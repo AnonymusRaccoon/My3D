@@ -15,6 +15,7 @@
 #include "components/game_display.h"
 #include "components/game_manager.h"
 #include "systems/game_manager_system.h"
+#include "map_interactions.h"
 
 int register_customcmps(gc_engine *engine)
 {
@@ -30,6 +31,7 @@ int register_customcmps(gc_engine *engine)
 	engine->add_callback(engine, "goto_main_menu", &goto_main_menu);
 	engine->add_callback(engine, "quit", &quit);
 	engine->add_callback(engine, "fullscreen", &fullscreen);
+	engine->add_callback(engine, "map_manage_click", &tile_interact);
 	engine->add_callback(engine, "resolution_down", &resolution_down);
 	engine->add_callback(engine, "resolution_up", &resolution_up);
 	engine->add_callback(engine, "absent_check", &absent_check);
