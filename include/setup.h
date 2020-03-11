@@ -21,10 +21,13 @@ bool toggle_pause(gc_engine *engine, gc_entity *entity, gc_vector2 _);
 
 int checkbox_update(gc_scene *s, gc_entity *entity, bool checked);
 void resolution_set_text(gc_entity *entity, gc_engine *engine);
+void framerate_set_text(gc_entity *entity, gc_engine *engine);
 
 bool fullscreen(gc_engine *engine, gc_entity *entity, gc_vector2 _);
 bool resolution_down(gc_engine *engine, gc_entity *entity, gc_vector2 _);
 bool resolution_up(gc_engine *engine, gc_entity *entity, gc_vector2 _);
+bool framerate_up(gc_engine *engine, gc_entity *entity, gc_vector2 _);
+bool framerate_down(gc_engine *engine, gc_entity *entity, gc_vector2 _);
 
 bool tile_select(gc_engine *engine, gc_entity *entity, gc_vector2 _);
 bool vertex_select(gc_engine *engine, gc_entity *entity, gc_vector2 _);

@@ -11,6 +11,10 @@
 	<gc_entities>
 		<panel src="panel" x="50%" y="45%" width="40%" height="65%" />
 		<text text="Options" x="50%" y="25%" />
+		<text text="Framerate" x="41%" y="40%"/>
+		<button x="53%" y="40%" click="framerate_down" sprite="left" width="2%" height="4%" />
+		<text x="59%" y="40%" size="18" text_id="52" />
+		<button x="65%" y="40%" click="framerate_up" sprite="right" width="2%" height="4%" />
 		<text text="Fullscreen" x="45%" y="50%" />
 		<button x="60%" y="50%" click="fullscreen" sprite="cross" width="5%" height="%" background_id="50" />
 		<text text="Resolution" x="41%" y="60%"/>

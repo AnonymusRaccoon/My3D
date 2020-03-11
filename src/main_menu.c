@@ -36,6 +36,8 @@ bool options(gc_engine *engine, gc_entity *entity, gc_vector2 _)
 		checkbox_update(engine->scene, entity, rend->is_fullscreen);
 	entity = engine->scene->get_entity(engine->scene, 51);
 	resolution_set_text(entity, engine);
+	entity = engine->scene->get_entity(engine->scene, 52);
+	framerate_set_text(entity, engine);
 	return (true);
 }
 

@@ -27,6 +27,8 @@ const struct callback callbacks[] = {
 	{"map_manage_click", &tile_interact},
 	{"resolution_down", &resolution_down},
 	{"resolution_up", &resolution_up},
+	{"framerate_up", &framerate_up},
+	{"framerate_down", &framerate_down},
 	{"absent_check", &absent_check},
 	{"absent_cross", &absent_cross},
 	{"forgot_lmfao", &forgot_lmfao},
