@@ -39,6 +39,7 @@ const struct callback callbacks[] = {
 	{"up_down", &up_down},
 	{"reset", &reset},
 	{"rotate", &rotate},
+	{"texture", &texture},
 	{NULL, NULL}
 };
 

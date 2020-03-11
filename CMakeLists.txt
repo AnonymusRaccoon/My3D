@@ -212,7 +212,7 @@ add_executable(My3D
         lib/gamacon/src/sfml_renderer/sfml_init.c
         lib/gamacon/src/sfml_renderer/sfml_events.c
         lib/gamacon/src/components/isometry/map_managment.c
-        lib/gamacon/include/components/map_managment.h
+        lib/gamacon/include/map_managment.h
         lib/xmlparser/src/otherget.c
         src/options.c
         lib/gamacon/src/components/input_component.c
@@ -242,17 +242,17 @@ add_executable(My3D
         src/systems/game_manager_system.c
         include/systems/game_manager_system.h
         lib/gamacon/include/keybindings.h
-        lib/gamacon/src/components/isometry/map_interactions.c
-        lib/gamacon/include/map_interactions.h
+        src/components/isometry/map_interactions.c
+        include/map_interactions.h
         lib/gamacon/include/keybindings.h
         lib/gamacon/src/ui/tooltip.c
         lib/gamacon/src/components/tooltip_component.c
         lib/gamacon/include/components/tooltip_component.h
         lib/gamacon/src/systems/tooltip_system.c
-        lib/gamacon/src/components/isometry/map_manager_component.c
-        lib/gamacon/include/components/isometry/map_manager_component.h
+        src/components/isometry/map_manager_component.c
+        include/components/isometry/map_manager_component.h
         lib/gamacon/src/components/isometry/vertex_data_loader.c
-        lib/gamacon/include/vertex_data_loader.h src/toolbar.c lib/gamacon/include/callbacks.h)
+        lib/gamacon/include/vertex_data_loader.h src/toolbar.c lib/gamacon/include/callbacks.h src/selectors.c)
 
 add_compile_options(-W -Wall -Wextra -Wshadow)
 
