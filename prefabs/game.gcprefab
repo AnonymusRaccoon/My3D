@@ -42,7 +42,7 @@
 
 		<gc_entity>
 			<game_manager happiness="50%" stupidity="0%" />
-			<teams_component delay="2">
+			<teams_component delay="10">
 				<prefab src="prefabs/teams/forgot_register.gcprefab" height="20%" />
 				<prefab src="prefabs/teams/absent.gcprefab" height="20%" />
 			</teams_component>

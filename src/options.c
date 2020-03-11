@@ -100,12 +100,12 @@ bool resolution_up(gc_engine *engine, gc_entity *entity, gc_vector2 _)
 		return (false);
 	while (resolutions[i].x <= rend->resolution.x)
 		i++;
+	if (resolutions[i].x == INT_MAX)
+		return (true);
 	sfRenderWindow_setSize(rend->window, (sfVector2u){
 		resolutions[i].x,
 		resolutions[i].y
 	});
-	if (resolutions[i].x == INT_MAX)
-		return (true);
 	rend->resolution = resolutions[i];
 	resolution_set_text(engine->scene->get_entity(engine->scene, 51), engine);
 	return (true);
