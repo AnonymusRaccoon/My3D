@@ -32,3 +32,4 @@ bool up_down(gc_engine *engine, gc_entity *entity, gc_vector2 _);
 bool reset(gc_engine *engine, gc_entity *entity, gc_vector2 _);
 bool rotate(gc_engine *engine, gc_entity *entity, gc_vector2 _);
 bool texture(gc_engine *engine, gc_entity *entity, gc_vector2 _);
+bool switch_texture(gc_engine *engine, gc_entity *entity, gc_vector2 _);

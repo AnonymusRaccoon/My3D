@@ -27,6 +27,10 @@ static void fdctr(gc_entity *entity, gc_scene *scene, void *component, node *n)
 	struct renderer *rend = GETCMP(entity, renderer);
 	char *display_type = xml_gettempprop(n, "stats");
 
+	if (!my_strcmp(display_type, "selected_tile")) {
+		cmp->type = SELECT_TILE_DISPLAY;
+		return;
+	}
 	if (!my_strcmp(display_type, "happiness"))
 		cmp->type = HAPPINESS_DISPLAY;
 	else

@@ -25,6 +25,9 @@
         <tiles>
             <tile name="cobblestone" />
             <tile name="command_block" />
+            <tile name="comparator_on" />
+            <tile name="crafting_table" />
+            <tile name="mossy_cobblestone" />
         </tiles>
     </data>
     <gc_entities>
@@ -57,6 +60,12 @@
 		<button sprite="reset" x="15%" y="3%" width="%" height="3%" tooltip="Reset the height of a tile." tooltip_y="-5" size="15" click="reset" />
 		<button sprite="rotate" x="19%" y="3%" width="%" height="3%" tooltip="Rotate a texture" tooltip_y="-5" size="15" click="rotate" />
 		<button sprite="texture" x="23%" y="3%" width="%" height="3%" tooltip="Change the texture of a tile" tooltip_y="-5" size="15" click="texture" />
+
+		<panel src="panel" x="30%" y="3%" width="%" height="6%"/>
+		<button sprite="texture" x="30%" y="3%" width="%" height="3%" tooltip="Select the texture to draw." tooltip_y="-5" size="15" click="switch_texture">
+			<game_display stats="selected_tile" />
+		</button>
+
 
 		<panel src="panel" x="100%" y="50%" width="50%" height="120%"/>
 		<text text="TEAMS" x="88%" y="40"/>
