@@ -12,10 +12,34 @@
 #include "systems/teams_system.h"
 #include <SFML/System.h>
 #include "teams.h"
+#include "callbacks.h"
 #include "components/game_display.h"
 #include "components/game_manager.h"
 #include "systems/game_manager_system.h"
 #include "map_interactions.h"
+
+const struct callback callbacks[] = {
+	{"start_button", &start_button},
+	{"options", &options},
+	{"goto_main_menu", &goto_main_menu},
+	{"quit", &quit},
+	{"fullscreen", &fullscreen},
+	{"map_manage_click", &tile_interact},
+	{"resolution_down", &resolution_down},
+	{"resolution_up", &resolution_up},
+	{"absent_check", &absent_check},
+	{"absent_cross", &absent_cross},
+	{"forgot_lmfao", &forgot_lmfao},
+	{"forgot_ok", &forgot_ok},
+	{"catch", &catch},
+	{"toggle_pause", &toggle_pause},
+	{"toggle_pause", &toggle_pause},
+	{"tile_select", &tile_select},
+	{"vertex_select", &vertex_select},
+	{"up_down", &up_down},
+	{"rotate", &rotate},
+	{NULL, NULL}
+};
 
 int register_customcmps(gc_engine *engine)
 {
@@ -26,20 +50,8 @@ int register_customcmps(gc_engine *engine)
 	engine->add_component(engine, &teams_component);
 	engine->add_system(engine, &teams_system);
     engine->finish_physics(engine);
-	engine->add_callback(engine, "start_button", &start_button);
-	engine->add_callback(engine, "options", &options);
-	engine->add_callback(engine, "goto_main_menu", &goto_main_menu);
-	engine->add_callback(engine, "quit", &quit);
-	engine->add_callback(engine, "fullscreen", &fullscreen);
-	engine->add_callback(engine, "map_manage_click", &tile_interact);
-	engine->add_callback(engine, "resolution_down", &resolution_down);
-	engine->add_callback(engine, "resolution_up", &resolution_up);
-	engine->add_callback(engine, "absent_check", &absent_check);
-	engine->add_callback(engine, "absent_cross", &absent_cross);
-	engine->add_callback(engine, "forgot_lmfao", &forgot_lmfao);
-	engine->add_callback(engine, "forgot_ok", &forgot_ok);
-	engine->add_callback(engine, "catch", &catch);
-	engine->add_callback(engine, "toggle_pause", &toggle_pause);
+    for (int i = 0; callbacks[i].func; i++)
+		engine->add_callback(engine, callbacks[i].name, callbacks[i].func);
     return (0);
 }
 

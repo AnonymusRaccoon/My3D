@@ -49,10 +49,10 @@
 		</gc_entity>
 
 		<panel src="panel" x="7%" y="3%" width="30%" height="6%"/>
-		<button sprite="tile_select" x="3%" y="3%" width="%" height="3%" tooltip="Select a tile." tooltip_x="5" tooltip_y="-5" size="15"/>
-		<button sprite="vertex_select" x="7%" y="3%" width="%" height="3%" tooltip="Select a Vertex." tooltip_y="-5" size="15"/>
-		<button sprite="up_down" x="15%" y="3%" width="%" height="3%" tooltip="Move a tiles.\n - Up with left click.\n - Down with right click" tooltip_y="-15" size="15"/>
-		<button sprite="rotate" x="19%" y="3%" width="%" height="3%" tooltip="Rotate a texture" tooltip_y="-5" size="15"/>
+		<button sprite="tile_select" x="3%" y="3%" width="%" height="3%" tooltip="Select a tile." tooltip_x="5" tooltip_y="-5" size="15" click="tile_select" />
+		<button sprite="vertex_select" x="7%" y="3%" width="%" height="3%" tooltip="Select a Vertex." tooltip_y="-5" size="15" click="vertex_select" />
+		<button sprite="up_down" x="15%" y="3%" width="%" height="3%" tooltip="Move a tiles.\n - Up with left click.\n - Down with right click" tooltip_y="-15" size="15" click="up_down" />
+		<button sprite="rotate" x="19%" y="3%" width="%" height="3%" tooltip="Rotate a texture" tooltip_y="-5" size="15" click="rotate" />
 
 		<panel src="panel" x="100%" y="50%" width="50%" height="120%"/>
 		<text text="TEAMS" x="88%" y="40"/>

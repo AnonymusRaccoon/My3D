@@ -25,3 +25,8 @@ void resolution_set_text(gc_entity *entity, gc_engine *engine);
 bool fullscreen(gc_engine *engine, gc_entity *entity, gc_vector2 _);
 bool resolution_down(gc_engine *engine, gc_entity *entity, gc_vector2 _);
 bool resolution_up(gc_engine *engine, gc_entity *entity, gc_vector2 _);
+
+bool tile_select(gc_engine *engine, gc_entity *entity, gc_vector2 _);
+bool vertex_select(gc_engine *engine, gc_entity *entity, gc_vector2 _);
+bool up_down(gc_engine *engine, gc_entity *entity, gc_vector2 _);
+bool rotate(gc_engine *engine, gc_entity *entity, gc_vector2 _);
