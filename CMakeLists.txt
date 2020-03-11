@@ -249,7 +249,7 @@ add_executable(My3D
         lib/gamacon/src/components/tooltip_component.c
         lib/gamacon/include/components/tooltip_component.h
         lib/gamacon/src/systems/tooltip_system.c
-        lib/gamacon/src/components/isometry/vertex_data_loader.c)
+        lib/gamacon/src/components/isometry/vertex_data_loader.c lib/gamacon/include/vertex_data_loader.h)
 
 add_compile_options(-W -Wall -Wextra -Wshadow)
 
