@@ -37,6 +37,7 @@ const struct callback callbacks[] = {
 	{"tile_select", &tile_select},
 	{"vertex_select", &vertex_select},
 	{"up_down", &up_down},
+	{"reset", &reset},
 	{"rotate", &rotate},
 	{NULL, NULL}
 };
