@@ -7,6 +7,9 @@
 		<sprite name="button_background" src="assets/ui/button_background.png" />
         <sprite name="happiness" src="assets/ui/happiness.png" />
         <sprite name="clown" src="assets/ui/clown.png" />
+        <sprite name="tile_select" src="assets/ui/tile_select.png" />
+        <sprite name="vertex_select" src="assets/ui/vertex_select.png" />
+        <sprite name="up_down" src="assets/ui/up_down.png" />
         <sprite name="rotate" src="assets/ui/rotate.png" />
         <sprite name="cobblestone" src="assets/sprites/cobblestone.png" />
         <sprite name="comparator_on" src="assets/sprites/comparator_on.png" />
@@ -25,6 +28,7 @@
     <gc_entities>
         <gc_entity>
             <clickable_component click="map_manage_click"/>
+            <map_manager_component />
             <transform_component>
                 <Position x="25" y="320" />
                 <Size x="100000000" y="100000000" />
@@ -38,13 +42,16 @@
 
 		<gc_entity>
 			<game_manager happiness="50%" stupidity="0%" />
-			<teams_component delay="5">
+			<teams_component delay="2">
 				<prefab src="prefabs/teams/forgot_register.gcprefab" height="20%" />
 				<prefab src="prefabs/teams/absent.gcprefab" height="20%" />
 			</teams_component>
 		</gc_entity>
 
 		<panel src="panel" x="7%" y="3%" width="30%" height="6%"/>
+		<button sprite="tile_select" x="3%" y="3%" width="%" height="3%" tooltip="Select a tile." tooltip_x="5" tooltip_y="-5" size="15"/>
+		<button sprite="vertex_select" x="7%" y="3%" width="%" height="3%" tooltip="Select a Vertex." tooltip_y="-5" size="15"/>
+		<button sprite="up_down" x="15%" y="3%" width="%" height="3%" tooltip="Move a tiles.\n - Up with left click.\n - Down with right click" tooltip_y="-15" size="15"/>
 		<button sprite="rotate" x="19%" y="3%" width="%" height="3%" tooltip="Rotate a texture" tooltip_y="-5" size="15"/>
 
 		<panel src="panel" x="100%" y="50%" width="50%" height="120%"/>
