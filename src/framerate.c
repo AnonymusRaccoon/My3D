@@ -9,7 +9,7 @@
 #include "engine.h"
 #include <malloc.h>
 #include "utility.h"
-#include "renderer.h"
+#include "components/renderer.h"
 #include "systems/sfml_renderer_system.h"
 #include "limits.h"
 
