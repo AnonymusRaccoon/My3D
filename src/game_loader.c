@@ -24,7 +24,7 @@ const struct callback callbacks[] = {
     {"goto_main_menu", &goto_main_menu},
     {"quit", &quit},
     {"fullscreen", &fullscreen},
-    {"map_manage_click", &tile_interact},
+    {"map_manage_click", &map_onclick},
     {"resolution_down", &resolution_down},
     {"resolution_up", &resolution_up},
     {"framerate_up", &framerate_up},

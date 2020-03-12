@@ -22,7 +22,7 @@ enum modes_on_tile {
     INVERT_ADD_VALUE = 1
 };
 
-bool tile_interact(gc_engine *engine, gc_entity *entity, gc_vector2 pos, \
+bool map_onclick(gc_engine *engine, gc_entity *entity, gc_vector2 pos, \
 enum gc_mousekeys key);
 
 #endif //MY3D_MAP_INTERACTIONS_H
