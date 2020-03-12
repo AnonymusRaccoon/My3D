@@ -28,7 +28,7 @@ OBJ = $(SRC:%.c=%.o)
 
 INCLUDE = -I ./include -I lib/gamacon/include -I lib/gamacon/lib/xmlparser/include
 
-CFLAGS = $(INCLUDE) -Wall -Wshadow -Wextra
+CFLAGS = $(INCLUDE) -Wall -Wshadow -Wextra -Wno-unused-parameter
 
 LDFLAGS = -L lib/gamacon -L lib/my -L lib/xmlparser -L lib/quadtree\
 -lgamacon -lxmlparser -lquadtree -lmy -lcsfml-system -lcsfml-graphics -lcsfml-audio -lcsfml-window -lm

@@ -18,7 +18,7 @@ static void ctr(void *component, va_list args)
 {
     struct game_display *cmp = (struct game_display *)component;
 
-    cmp->type = va_arg(args, display_type);
+    cmp->type = va_arg(args, display_type_enum);
 }
 
 static void fdctr(gc_entity *entity, gc_scene *scene, void *component, node *n)

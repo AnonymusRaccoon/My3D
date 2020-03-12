@@ -12,12 +12,12 @@ typedef enum display_type
     HAPPINESS_DISPLAY,
     STUPIDITY_DISPLAY,
     SELECT_TILE_DISPLAY
-} display_type;
+} display_type_enum;
 
 struct game_display
 {
     gc_component base;
-    display_type type;
+    display_type_enum type;
 };
 
 const struct game_display game_display;

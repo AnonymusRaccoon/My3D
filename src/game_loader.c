@@ -17,6 +17,7 @@
 #include "components/game_manager.h"
 #include "systems/game_manager_system.h"
 #include "map_interactions.h"
+#include "my.h"
 
 const struct callback callbacks[] = {
     {"start_button", &start_button},
@@ -57,7 +58,8 @@ int register_customcmps(gc_engine *engine)
     engine->add_system(engine, &teams_system);
     engine->finish_physics(engine);
     for (int i = 0; callbacks[i].func; i++)
-        engine->add_callback(engine, callbacks[i].name, callbacks[i].func);
+        engine->add_callback(engine, my_strdup(callbacks[i].name), \
+callbacks[i].func);
     return (0);
 }
 
