@@ -252,7 +252,12 @@ add_executable(My3D
         src/components/isometry/map_manager_component.c
         include/components/isometry/map_manager_component.h
         lib/gamacon/src/components/isometry/vertex_data_loader.c
-        lib/gamacon/include/vertex_data_loader.h src/toolbar.c lib/gamacon/include/callbacks.h src/selectors.c src/framerate.c)
+        lib/gamacon/include/vertex_data_loader.h src/toolbar.c
+        lib/gamacon/include/callbacks.h src/selectors.c
+        src/framerate.c
+        lib/gamacon/src/components/isometry/create_map_functions.c
+        lib/gamacon/include/create_map_functions.h
+)
 
 add_compile_options(-W -Wall -Wextra -Wshadow)
 
