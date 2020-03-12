@@ -13,6 +13,15 @@
 #include "vertex_component.h"
 #include "keybindings.h"
 
+enum modes_on_tile {
+	VERTEX_0 = 2,
+	VERTEX_1 = 4,
+	VERTEX_2 = 8,
+	VERTEX_3 = 16,
+	ALL_VERTICES = 30,
+	INVERT_ADD_VALUE = 1
+};
+
 bool tile_interact(gc_engine *engine, gc_entity *entity, gc_vector2 pos, \
 enum gc_mousekeys key);
 
