@@ -9,15 +9,15 @@
 
 typedef enum display_type
 {
-	HAPPINESS_DISPLAY,
-	STUPIDITY_DISPLAY,
-	SELECT_TILE_DISPLAY
+    HAPPINESS_DISPLAY,
+    STUPIDITY_DISPLAY,
+    SELECT_TILE_DISPLAY
 } display_type;
 
 struct game_display
 {
-	gc_component base;
-	display_type type;
+    gc_component base;
+    display_type type;
 };
 
 const struct game_display game_display;

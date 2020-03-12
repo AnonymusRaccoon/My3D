@@ -9,18 +9,18 @@
 
 enum brush
 {
-	MOVE,
-	RESET,
-	ROTATE,
-	TEXTURE
+    MOVE,
+    RESET,
+    ROTATE,
+    TEXTURE
 };
 
 struct map_manager_component
 {
-	gc_component base;
-	bool tile_mode;
-	enum brush brush;
-	void *selected_texture;
+    gc_component base;
+    bool tile_mode;
+    enum brush brush;
+    void *selected_texture;
 };
 
 const struct map_manager_component map_manager_component;

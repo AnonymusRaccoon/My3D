@@ -19,44 +19,44 @@
 #include "map_interactions.h"
 
 const struct callback callbacks[] = {
-	{"start_button", &start_button},
-	{"options", &options},
-	{"goto_main_menu", &goto_main_menu},
-	{"quit", &quit},
-	{"fullscreen", &fullscreen},
-	{"map_manage_click", &tile_interact},
-	{"resolution_down", &resolution_down},
-	{"resolution_up", &resolution_up},
-	{"framerate_up", &framerate_up},
-	{"framerate_down", &framerate_down},
-	{"absent_check", &absent_check},
-	{"absent_cross", &absent_cross},
-	{"forgot_lmfao", &forgot_lmfao},
-	{"forgot_ok", &forgot_ok},
-	{"catch", &catch},
-	{"toggle_pause", &toggle_pause},
-	{"toggle_pause", &toggle_pause},
-	{"tile_select", &tile_select},
-	{"vertex_select", &vertex_select},
-	{"up_down", &up_down},
-	{"reset", &reset},
-	{"rotate", &rotate},
-	{"texture", &texture},
-	{"switch_texture", &switch_texture},
-	{NULL, NULL}
+    {"start_button", &start_button},
+    {"options", &options},
+    {"goto_main_menu", &goto_main_menu},
+    {"quit", &quit},
+    {"fullscreen", &fullscreen},
+    {"map_manage_click", &tile_interact},
+    {"resolution_down", &resolution_down},
+    {"resolution_up", &resolution_up},
+    {"framerate_up", &framerate_up},
+    {"framerate_down", &framerate_down},
+    {"absent_check", &absent_check},
+    {"absent_cross", &absent_cross},
+    {"forgot_lmfao", &forgot_lmfao},
+    {"forgot_ok", &forgot_ok},
+    {"catch", &catch},
+    {"toggle_pause", &toggle_pause},
+    {"toggle_pause", &toggle_pause},
+    {"tile_select", &tile_select},
+    {"vertex_select", &vertex_select},
+    {"up_down", &up_down},
+    {"reset", &reset},
+    {"rotate", &rotate},
+    {"texture", &texture},
+    {"switch_texture", &switch_texture},
+    {NULL, NULL}
 };
 
 int register_customcmps(gc_engine *engine)
 {
-	engine->add_component(engine, &game_manager);
-	engine->add_system(engine, new_system(&game_manager_system, engine));
-	engine->add_component(engine, &game_display);
-	engine->add_system(engine, &game_display_system);
-	engine->add_component(engine, &teams_component);
-	engine->add_system(engine, &teams_system);
+    engine->add_component(engine, &game_manager);
+    engine->add_system(engine, new_system(&game_manager_system, engine));
+    engine->add_component(engine, &game_display);
+    engine->add_system(engine, &game_display_system);
+    engine->add_component(engine, &teams_component);
+    engine->add_system(engine, &teams_system);
     engine->finish_physics(engine);
     for (int i = 0; callbacks[i].func; i++)
-		engine->add_callback(engine, callbacks[i].name, callbacks[i].func);
+        engine->add_callback(engine, callbacks[i].name, callbacks[i].func);
     return (0);
 }
 
@@ -72,7 +72,7 @@ int create_game_scene(gc_engine *engine)
     return (0);
 }
 
-int start_game()
+int start_game(void)
 {
     gc_engine *engine = engine_create();
     sfClock *clock = sfClock_create();
