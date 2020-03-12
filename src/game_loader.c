@@ -7,8 +7,8 @@
 
 #include "engine.h"
 #include "setup.h"
-#include "map_managment.h"
 #include "components/teams_component.h"
+#include "components/isometry/map_manager_component.h"
 #include "systems/teams_system.h"
 #include <SFML/System.h>
 #include "teams.h"
@@ -48,6 +48,7 @@ const struct callback callbacks[] = {
 
 int register_customcmps(gc_engine *engine)
 {
+    engine->add_component(engine, &map_manager_component);
     engine->add_component(engine, &game_manager);
     engine->add_system(engine, new_system(&game_manager_system, engine));
     engine->add_component(engine, &game_display);

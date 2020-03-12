@@ -6,14 +6,14 @@
 */
 
 #include "map_interactions.h"
-#include "clickable_component.h"
+#include "components/clickable_component.h"
 #include "entity.h"
 #include "my.h"
 #include <math.h>
 #include "components/transform_component.h"
-#include "map_managment.h"
+#include "map_utils.h"
 #include <stdlib.h>
-#include <components/isometry/map_manager_component.h>
+#include "components/isometry/map_manager_component.h"
 
 void click_tile(gc_engine *engine, struct map_manager_component *manager, \
 struct tile *ret, bool is_left)

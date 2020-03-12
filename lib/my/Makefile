@@ -6,22 +6,22 @@
 ##
 
 SRC = src/printf.c \
-    src/printf_utility.c \
-    src/my_putlonglong_base.c \
-    src/formaters/string_formater.c \
-    src/formaters/string_nonprintable_formater.c \
-    src/formaters/char_formater.c \
-    src/formaters/int_formater.c \
-    src/formaters/uint_formater.c \
-    src/formaters/ptr_formater.c \
-    src/formaters/ubinary_formater.c \
-    src/formaters/octal_formater.c \
-    src/formaters/hexa_formater.c \
-    src/formaters/big_hexa_formater.c \
-    src/formaters/float_formater.c \
-    src/formaters/no_format.c \
-    src/get_nbr_size.c \
-    my/*.c
+	src/printf_utility.c \
+	src/my_putlonglong_base.c \
+	src/formaters/string_formater.c \
+	src/formaters/string_nonprintable_formater.c \
+	src/formaters/char_formater.c \
+	src/formaters/int_formater.c \
+	src/formaters/uint_formater.c \
+	src/formaters/ptr_formater.c \
+	src/formaters/ubinary_formater.c \
+	src/formaters/octal_formater.c \
+	src/formaters/hexa_formater.c \
+	src/formaters/big_hexa_formater.c \
+	src/formaters/float_formater.c \
+	src/formaters/no_format.c \
+	src/get_nbr_size.c \
+	my/*.c
 
 OBJ = *.o
 
@@ -42,20 +42,20 @@ UT = ut
 all: $(NAME)
 
 $(NAME):
-    $(CC) -c $(SRC) $(INCLUDE) $(CFLAGS)
-    ar rc $(NAME) $(OBJ)
+	$(CC) -c $(SRC) $(INCLUDE) $(CFLAGS)
+	ar rc $(NAME) $(OBJ)
 
 tests_run:
-    $(CC) -o $(UT) $(SRC) $(TESTS) $(INCLUDE) $(COVERAGE) $(CFLAGS)
-    ./$(UT)
+	$(CC) -o $(UT) $(SRC) $(TESTS) $(INCLUDE) $(COVERAGE) $(CFLAGS)
+	./$(UT)
 
 clean:
-    rm -rf $(OBJ)
-    rm -rf *.gc*
+	rm -rf $(OBJ)
+	rm -rf *.gc*
 
 fclean: clean
-    rm -rf $(NAME)
-    rm -rf $(UT)
+	rm -rf $(NAME)
+	rm -rf $(UT)
 
 re: fclean all
 

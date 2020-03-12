@@ -10,7 +10,7 @@
 #define MY3D_MAP_INTERACTIONS_H
 
 #include "engine.h"
-#include "vertex_component.h"
+#include "components/vertex_component.h"
 #include "keybindings.h"
 
 enum modes_on_tile {

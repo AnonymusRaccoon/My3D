@@ -69,7 +69,7 @@ add_executable(My3D
         lib/gamacon/src/components/parallax_component.c
         lib/gamacon/src/components/renderer.c
         lib/gamacon/src/components/transform_component.c
-        lib/gamacon/src/components/isometry/vertex_component.c
+        lib/gamacon/src/components/vertex_component.c
         lib/gamacon/src/deserializer/deserialize_entity.c
         lib/gamacon/src/deserializer/prefab.c
         lib/gamacon/src/engine/discard_player.c
@@ -206,13 +206,13 @@ add_executable(My3D
         src/main_menu.c
         lib/gamacon/src/components/clickable_component.c
         lib/gamacon/include/components/clickable_component.h
-        lib/gamacon/src/systems/clickable_manager.c
+        lib/gamacon/src/systems/clickable_system.c
         lib/gamacon/src/sfml_renderer/sfml_events.c
         lib/my/my/my_str_replace.c
         lib/gamacon/src/sfml_renderer/sfml_init.c
         lib/gamacon/src/sfml_renderer/sfml_events.c
-        lib/gamacon/src/components/isometry/map_managment.c
-        lib/gamacon/include/map_managment.h
+        lib/gamacon/src/isometry/map_utils.c
+        lib/gamacon/include/map_utils.h
         lib/xmlparser/src/otherget.c
         src/options.c
         lib/gamacon/src/components/input_component.c
@@ -233,7 +233,7 @@ add_executable(My3D
         include/components/game_display.h
         src/components/game_display.c
         src/systems/game_display_system.c
-        lib/gamacon/src/components/tile_collision_manager.c
+        src/isometry/tile_collision_manager.c
         lib/gamacon/include/tile_collision_manager.h
         lib/gamacon/src/engine/event_manager.c
         lib/gamacon/include/event_manager.h
@@ -242,21 +242,22 @@ add_executable(My3D
         src/systems/game_manager_system.c
         include/systems/game_manager_system.h
         lib/gamacon/include/keybindings.h
-        src/components/isometry/map_interactions.c
+        src/isometry/map_interactions.c
         include/map_interactions.h
         lib/gamacon/include/keybindings.h
         lib/gamacon/src/ui/tooltip.c
         lib/gamacon/src/components/tooltip_component.c
         lib/gamacon/include/components/tooltip_component.h
         lib/gamacon/src/systems/tooltip_system.c
-        src/components/isometry/map_manager_component.c
+        src/components/map_manager_component.c
         include/components/isometry/map_manager_component.h
-        lib/gamacon/src/components/isometry/vertex_data_loader.c
-        lib/gamacon/include/vertex_data_loader.h src/toolbar.c
+        lib/gamacon/src/isometry/vertex_data_loader.c
+        lib/gamacon/include/vertex_data_loader.h
+        src/toolbar.c
         lib/gamacon/include/callbacks.h src/selectors.c
         src/framerate.c
-        lib/gamacon/src/components/isometry/create_map_functions.c
-        lib/gamacon/include/create_map_functions.h
+        lib/gamacon/src/isometry/isometry.c
+        lib/gamacon/include/isometry.h
 )
 
 add_compile_options(-W -Wall -Wextra -Wshadow)
