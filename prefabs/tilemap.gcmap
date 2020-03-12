@@ -1,160 +1,160 @@
 <gc_map >
-	<vertex_data>
-	    <line>
-	        <row height="-50" />
-	        <row height="-50" />
-	        <row height="-50" />
-	        <row height="-50" />
-	        <row height="-50" />
-	        <row height="-50" />
-	        <row height="-50" />
-	        <row height="-50" />
-	        <row height="-50" />
-	        <row height="-50" />
-	        <row height="-50" />
-	        <row height="-50" />
-	    </line>
-	    <line>
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	    </line>
-	    <line>
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	    </line>
-	    <line>
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	    </line>
-	    <line>
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	    </line>
-	    <line>
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	    </line>
-	    <line>
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	    </line>
-	    <line>
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	    </line>
-	    <line>
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	    </line>
-	    <line>
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	    </line>
-	    <line>
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	        <row height="0" />
-	    </line>
+    <vertex_data>
+        <line>
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+        </line>
+        <line>
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+        </line>
+        <line>
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+        </line>
+        <line>
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+        </line>
+        <line>
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+        </line>
+        <line>
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+        </line>
+        <line>
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+        </line>
+        <line>
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+        </line>
+        <line>
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+        </line>
+        <line>
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+        </line>
+        <line>
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+            <row height="0" />
+        </line>
     </vertex_data>
     <tiles_data>
         <texture x="0" y="0" name="cobblestone" />
@@ -192,7 +192,7 @@
         <texture x="2" y="8" name="grass_top" />
         <texture x="2" y="9" name="grass_top" />
         <texture x="2" y="10" name="grass_top" />
-        
+
 		<texture x="3" y="0" name="cobblestone" />
         <texture x="3" y="1" name="grass_top" />
         <texture x="3" y="2" name="grass_top" />
@@ -216,7 +216,7 @@
         <texture x="4" y="8" name="grass_top" />
         <texture x="4" y="9" name="grass_top" />
         <texture x="4" y="10" name="grass_top" />
-        
+
 		<texture x="5" y="0" name="cobblestone" />
         <texture x="5" y="1" name="grass_top" />
         <texture x="5" y="2" name="grass_top" />
@@ -252,7 +252,7 @@
         <texture x="7" y="8" name="grass_top" />
         <texture x="7" y="9" name="grass_top" />
         <texture x="7" y="10" name="grass_top" />
-        
+
 		<texture x="8" y="0" name="cobblestone" />
         <texture x="8" y="1" name="grass_top" />
         <texture x="8" y="2" name="grass_top" />

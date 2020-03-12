@@ -66,6 +66,6 @@ int my_getnbr(const char *str)
             break;
     }
     if (count <= 0)
-    	return (0);
+        return (0);
     return init_print(str, count, start_index);
 }

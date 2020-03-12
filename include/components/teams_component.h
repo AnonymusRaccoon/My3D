@@ -9,12 +9,12 @@
 
 struct teams_component
 {
-	gc_component base;
-	float next_teams;
-	float delay;
-	char **prefabs;
-	int *prefabs_size;
-	int prefab_count;
+    gc_component base;
+    float next_teams;
+    float delay;
+    char **prefabs;
+    int *prefabs_size;
+    int prefab_count;
 };
 
 const struct teams_component teams_component;

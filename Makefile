@@ -6,7 +6,7 @@
 ##
 
 SRC = src/main.c \
-	src/game_loader.c
+    src/game_loader.c
 
 OBJ = $(SRC:%.c=%.o)
 
@@ -24,36 +24,36 @@ CC = gcc
 all: build
 
 build: $(OBJ)
-	$(MAKE) -C lib/gamacon
-	$(MAKE) -C lib/my
-	$(MAKE) -C lib/xmlparser
-	$(MAKE) -C lib/quadtree
-	$(CC) -o $(NAME) $(OBJ) $(LDFLAGS)
+    $(MAKE) -C lib/gamacon
+    $(MAKE) -C lib/my
+    $(MAKE) -C lib/xmlparser
+    $(MAKE) -C lib/quadtree
+    $(CC) -o $(NAME) $(OBJ) $(LDFLAGS)
 
 clean:
-	$(MAKE) -C lib/gamacon clean
-	$(MAKE) -C lib/my clean
-	$(MAKE) -C lib/xmlparser clean
-	$(MAKE) -C lib/quadtree clean
-	$(RM) $(OBJ)
+    $(MAKE) -C lib/gamacon clean
+    $(MAKE) -C lib/my clean
+    $(MAKE) -C lib/xmlparser clean
+    $(MAKE) -C lib/quadtree clean
+    $(RM) $(OBJ)
 
 fclean: clean
-	$(RM) $(NAME)
+    $(RM) $(NAME)
 
 ffclean: fclean
-	$(MAKE) -C lib/my fclean
-	$(MAKE) -C lib/gamacon fclean
-	$(MAKE) -C lib/xmlparser fclean
-	$(MAKE) -C lib/quadtree fclean
+    $(MAKE) -C lib/my fclean
+    $(MAKE) -C lib/gamacon fclean
+    $(MAKE) -C lib/xmlparser fclean
+    $(MAKE) -C lib/quadtree fclean
 
 re: fclean all
 
 dbg: CFLAGS += -g
 dbg: clean $(OBJ)
-	$(MAKE) -C lib/gamacon dbg
-	$(MAKE) -C lib/my
-	$(MAKE) -C lib/xmlparser dbg
-	$(MAKE) -C lib/quadtree dbg
-	$(CC) -o $(NAME) $(OBJ) $(LDFLAGS)
+    $(MAKE) -C lib/gamacon dbg
+    $(MAKE) -C lib/my
+    $(MAKE) -C lib/xmlparser dbg
+    $(MAKE) -C lib/quadtree dbg
+    $(CC) -o $(NAME) $(OBJ) $(LDFLAGS)
 
 .PHONY: all build clean fclean ffclean
