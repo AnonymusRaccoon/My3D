@@ -193,7 +193,7 @@
         <texture x="2" y="9" name="grass_top" />
         <texture x="2" y="10" name="grass_top" />
 
-		<texture x="3" y="0" name="cobblestone" />
+        <texture x="3" y="0" name="cobblestone" />
         <texture x="3" y="1" name="grass_top" />
         <texture x="3" y="2" name="grass_top" />
         <texture x="3" y="3" name="grass_top" />
@@ -205,7 +205,7 @@
         <texture x="3" y="9" name="grass_top" />
         <texture x="3" y="10" name="grass_top" />
 
-		<texture x="4" y="0" name="cobblestone" />
+        <texture x="4" y="0" name="cobblestone" />
         <texture x="4" y="1" name="grass_top" />
         <texture x="4" y="2" name="grass_top" />
         <texture x="4" y="3" name="grass_top" />
@@ -217,7 +217,7 @@
         <texture x="4" y="9" name="grass_top" />
         <texture x="4" y="10" name="grass_top" />
 
-		<texture x="5" y="0" name="cobblestone" />
+        <texture x="5" y="0" name="cobblestone" />
         <texture x="5" y="1" name="grass_top" />
         <texture x="5" y="2" name="grass_top" />
         <texture x="5" y="3" name="grass_top" />
@@ -229,7 +229,7 @@
         <texture x="5" y="9" name="grass_top" />
         <texture x="5" y="10" name="grass_top" />
 
-		<texture x="6" y="0" name="cobblestone" />
+        <texture x="6" y="0" name="cobblestone" />
         <texture x="6" y="1" name="grass_top" />
         <texture x="6" y="2" name="grass_top" />
         <texture x="6" y="3" name="grass_top" />
@@ -241,7 +241,7 @@
         <texture x="6" y="9" name="grass_top" />
         <texture x="6" y="10" name="grass_top" />
 
-		<texture x="7" y="0" name="cobblestone" />
+        <texture x="7" y="0" name="cobblestone" />
         <texture x="7" y="1" name="grass_top" />
         <texture x="7" y="2" name="grass_top" />
         <texture x="7" y="3" name="grass_top" />
@@ -253,7 +253,7 @@
         <texture x="7" y="9" name="grass_top" />
         <texture x="7" y="10" name="grass_top" />
 
-		<texture x="8" y="0" name="cobblestone" />
+        <texture x="8" y="0" name="cobblestone" />
         <texture x="8" y="1" name="grass_top" />
         <texture x="8" y="2" name="grass_top" />
         <texture x="8" y="3" name="grass_top" />
@@ -265,7 +265,7 @@
         <texture x="8" y="9" name="grass_top" />
         <texture x="8" y="10" name="grass_top" />
 
-		<texture x="9" y="0" name="cobblestone" />
+        <texture x="9" y="0" name="cobblestone" />
         <texture x="9" y="1" name="grass_top" />
         <texture x="9" y="2" name="grass_top" />
         <texture x="9" y="3" name="grass_top" />

@@ -28,7 +28,8 @@ int orientation(gc_vector2 p, gc_vector2 q, gc_vector2 r)
     return ((tmp > 0) ? 1 : 2);
 }
 
-bool gc_vector2_do_intersect(gc_vector2 p1, gc_vector2 q1, gc_vector2 p2, gc_vector2 q2)
+bool gc_vector2_do_intersect(gc_vector2 p1, gc_vector2 q1, \
+gc_vector2 p2, gc_vector2 q2)
 {
     int o1 = orientation(p1, q1, p2);
     int o2 = orientation(p1, q1, q2);
@@ -74,7 +75,8 @@ bool is_pos_in_tile(gc_vector2 pos, struct tile *tile)
     struct vertex **c = tile->corners;
     gc_vector2 corners[4];
 
+    pos.y *= -1;
     for (int i = 0; i < 4; i++)
-        corners[i] = get_tile_coords_to_pixels(c[i]->x, c[i]->y, c[i]->z);
+        corners[i] = gc_vector2_from_coords(c[i]->x, c[i]->y, c[i]->z);
     return (is_point_in_polygon(corners, 4, pos));
 }
