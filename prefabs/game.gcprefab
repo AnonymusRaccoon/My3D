@@ -31,11 +31,12 @@
         </tiles>
     </data>
     <gc_entities>
+    	<camera x="0" y="300" />
         <gc_entity>
             <clickable_component click="map_manage_click"/>
             <map_manager_component />
             <transform_component>
-                <Position x="25" y="320" />
+                <Position x="0" y="0" />
                 <Size x="100000000" y="100000000" />
             </transform_component>
             <vertex_component tilemap="prefabs/tilemap.gcmap" />

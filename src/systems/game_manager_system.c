@@ -3,6 +3,7 @@
 //
 
 #include <components/tag_component.h>
+#include <systems/sfml_renderer_system.h>
 #include "my.h"
 #include "prefab.h"
 #include "keybindings.h"
@@ -39,6 +40,7 @@ static void update_entity(gc_engine *engine, void *system, gc_entity *entity, \
 float dtime)
 {
 	struct game_manager *manager = GETCMP(entity, game_manager);
+	struct sfml_renderer_system *rend = GETSYS(engine, sfml_renderer_system);
 	gc_scene *gameover_scene = NULL;
 
 	if (manager->happiness <= 0)
@@ -48,6 +50,14 @@ float dtime)
 
 	if (gameover_scene)
 		engine->change_scene(engine, gameover_scene);
+	if (engine->is_keypressed(sfKeyLeft))
+		sfView_move(rend->view, (sfVector2f){-10, 0});
+	if (engine->is_keypressed(sfKeyRight))
+		sfView_move(rend->view, (sfVector2f){10, 0});
+	if (engine->is_keypressed(sfKeyDown))
+		sfView_move(rend->view, (sfVector2f){0, 10});
+	if (engine->is_keypressed(sfKeyUp))
+		sfView_move(rend->view, (sfVector2f){0, -10});
 }
 
 static void ctr(void *system, va_list list)
