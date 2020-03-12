@@ -62,12 +62,8 @@ void move_tile(gc_engine *engine, struct tile *ret, char mode, bool r)
 {
 	int val = (mode & INVERT_ADD_VALUE) ? ADD_VALUE : -ADD_VALUE;
 
-	if (mode & VERTEX_0)
-		ret->corners[0]->z += (r) ? -ret->corners[0]->z : val;
-	if (mode & VERTEX_1)
-		ret->corners[1]->z += (r) ? -ret->corners[1]->z : val;
-	if (mode & VERTEX_2)
-		ret->corners[2]->z += (r) ? -ret->corners[2]->z : val;
-	if (mode & VERTEX_3)
-		ret->corners[3]->z += (r) ? -ret->corners[3]->z : val;
+	for (int i = 0; i < 4; i++) {
+		if (mode & (int)pow(2, i + 1))
+			ret->corners[i]->z += (r) ? -ret->corners[i]->z : val;
+	}
 }
